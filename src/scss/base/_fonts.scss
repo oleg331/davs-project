@@ -1,0 +1,10 @@
+@include font-face($font-yeseva-folder, $font-yeseva-regular);
+
+@include font-face($font-comfortaa-folder, $font-comfortaa-light);
+@include font-face($font-comfortaa-folder, $font-comfortaa-bold);
+@include font-face($font-comfortaa-folder, $font-comfortaa-regular);
+
+@include font-face($font-tryclother-folder, $font-tryclother-bold);
+@include font-face($font-tryclother-folder, $font-tryclother-black);
+
+@include font-face($font-ebgaramond-folder, $font-ebgaramond-extrabolditalic)

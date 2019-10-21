@@ -1,0 +1,60 @@
+// Media query for mobile first layout 
+@mixin small-breakpoint {
+  @media (min-width: #{$mobile}) {
+    @content;
+  }
+}
+
+// Break on tablet
+@mixin medium-breakpoint {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+// Break on desktop
+@mixin large-breakpoint {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+// clearfix
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+  }
+}
+
+// fonts
+@mixin font-face($font-folder, $font) {
+  @font-face {
+    font-family: $font;
+    src: url('../../../dist/fonts/#{$font-folder}/#{$font}.eot');
+    src: url('../../../dist/fonts/#{$font-folder}/#{$font}.eot?#iefix') format('embedded-opentype'),
+    url('../../../dist/fonts/#{$font-folder}/#{$font}.woff') format('woff'),
+    url('../../../dist/fonts/#{$font-folder}/#{$font}.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@mixin font-family($font-base) {
+  font-family: $font-base, Arial, sans-serif;
+}
+
+@mixin font($font-size, $font-base) {
+  font: $font-size $font-base, Arial, sans-serif;
+}
+
+// gradient
+
+@mixin gradient-color($left-color, $right-color) {
+  background: -webkit-linear-gradient($left-color, $right-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
