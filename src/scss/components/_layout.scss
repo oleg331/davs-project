@@ -1,3 +1,20 @@
 /**
  * Layout
  */
+
+ body {
+   @include font(16px, $font-comfortaa-regular);
+   color: #212121;
+   min-width: 330px;
+ }
+
+  .wrapper {
+    max-width: $large-desktop;
+    margin: 0 auto;
+    padding: 48px 10px 0;
+    box-sizing: content-box;
+
+    @include x-large {
+      padding-top: 28px;
+    }
+  }

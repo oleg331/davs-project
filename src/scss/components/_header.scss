@@ -1,17 +1,45 @@
 #header {
+  position: relative;
   background: url(../images/bg-main.jpg) center top / cover no-repeat;
+  min-height: 900px;
+  padding-bottom: 100px;
+  height: 100vh;
+  box-sizing: border-box;
 
-  .header-wrapper {
-    max-width: $large-desktop;
-    margin: 0 auto;
-    padding: 48px 10px 0;
-    box-sizing: content-box;
+  @include x-large {
+    min-height: 600px;
+  }
+
+  @include medium {
+    height: inherit;
+    padding-bottom: 50px;
+  }
+
+  @include small {
+    min-height: inherit;
+  }
+
+  .header-scroll-text {
+    @include scroll-text(37px, $height-scroll-text, '../images/header/scroll-text.png');
   }
 }
 
 .header-top {
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 67px;
+
+  @include x-large {
+    margin-bottom: 6vw;
+  }
+
+  @include xs-large {
+    align-items: center;
+  }
+
+  @include xs-small {
+    display: block;
+    text-align: center;
+  }
 
   #logo {
     text-transform: uppercase;
@@ -24,6 +52,14 @@
     @include font(39px, $font-yeseva-regular);
     @include gradient-color(#5582de, #4f6fb0);
     font-weight: bold;
+
+    @include xs-large {
+      padding-top: 0
+    }
+
+    @include xs-small {
+      padding: 0 0 10px;
+    }
   }
 
   .header-description {
@@ -38,25 +74,36 @@
       content: "•";
       position: absolute;
       left: 0;
-      top: 0;
+      top: 15px;
       bottom: 0;
       line-height: 75px;
-      padding-top: 14px;
       font-size: 38px;
       @include gradient-color(#5582de, #4f6fb0);
+    }
+
+    @include xs-large {
+      display: none;
     }
   }
 
   .number-header {
-    color: #212121;
+    color: $color-primary;
     text-decoration: none;
     margin-left: auto;
     padding-top: 14px;
     @include font(26px, $font-tryclother-bold);
+
+    @include x-large {
+      display: none;
+    }
   }
 
   .btn-general {
     margin-left: 24px;
+
+    @include x-large {
+      margin-left: auto;
+    }
   }
 
   .icon-call {
@@ -68,11 +115,14 @@
 }
 
 .header-content {
+  padding-bottom: 50px;
+
   .header-heading {
     @include font(97px, $font-tryclother-black);
-    color: #212121;
+    color: $color-primary;
     text-align: center;
     line-height: 82px;
+    padding-bottom: 46px;
 
     .text-italic {
       @include font-family($font-ebgaramond-extrabolditalic);
@@ -87,6 +137,115 @@
       display: block;
       padding-top: 28px;
       letter-spacing: 2.7px;
+    }
+
+    @include x-large {
+      font-size: 8.3vw;
+      line-height: 7vw;
+      padding-bottom: 4vw;
+
+      .text-light {
+        font-size: 4.4vw;
+        padding-top: 2.2vw;
+      }
+    }
+
+    @include small {
+      font-size: 32px;
+      line-height: 28px;
+      padding-bottom: 30px;
+      max-width: 420px;
+      margin: 0 auto;
+
+      .text-light {
+        padding-top: 10px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .header-list {
+    @include font(20px, $font-comfortaa-bold);
+    color: $color-primary;
+    display: flex;
+    justify-content: space-around;
+    max-width: 940px;
+    margin: 0 auto;
+    list-style: none;
+    padding-bottom: 73px;
+
+    li {
+      position: relative;
+      max-width: 215px;
+      display: flex;
+      align-items: center;
+      padding-left: 24px;
+
+      &::before {
+        content: '';
+        width: 4px;
+        border: 2px solid #8caae7;
+        display: inline-block;
+        border-radius: 50%;
+        height: 4px;
+        position: absolute;
+        left: 0;
+      }
+    }
+
+    @include x-large {
+      font-size: 1.8vw;
+      padding-bottom: 6.7vw;
+
+      li {
+        max-width: 19vw;
+      }
+    }
+
+    @include medium {
+      flex-flow: column wrap;
+      align-items: center;
+      padding-bottom: 30px;
+      font-size: 14px;
+
+      li {
+        max-width: inherit;
+
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  .header-info {
+    @include font(#{'15px/24px'}, $font-comfortaa-regular);
+    color: $color-primary;
+    max-width: 630px;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 0.8px;
+
+    span {
+      @include font-family($font-comfortaa-bold);
+    }
+  }
+
+  .header-note {
+    padding-bottom: 39px;
+  }
+
+  .header-content-btn {
+    width: 452px;
+    margin: 0 auto;
+
+    .icon-calculator {
+      display: inline-block;
+      vertical-align: middle;
+      width: 32px;
+      height: 39px;
+      background: url(../images/header/icon-calculator.png) 0 0 no-repeat;
+      margin-left: -10px;
     }
   }
 }

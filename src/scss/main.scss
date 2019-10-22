@@ -10,7 +10,6 @@
 // Reset
 //==============================================================================
 
-@import "base/normalize";
 @import "base/reset";
 
 //==============================================================================
@@ -18,11 +17,6 @@
 //==============================================================================
 
 @import "components/header";
-@import "components/scaffolding";
-@import "components/grid";
-@import "components/helpers";
+@import "components/furniture";
 @import "components/buttons";
-@import "components/forms";
-@import "components/tables";
-@import "components/navigation";
 @import "components/layout";

@@ -1,20 +1,33 @@
+// Media query for xs mobile first layout 
+@mixin xs-small {
+  @media screen and (max-width: #{$xs-mobile}) {
+    @content;
+  }
+}
 // Media query for mobile first layout 
-@mixin small-breakpoint {
-  @media (min-width: #{$mobile}) {
+@mixin small {
+  @media screen and (max-width: #{$mobile}) {
     @content;
   }
 }
 
 // Break on tablet
-@mixin medium-breakpoint {
-  @media (min-width: #{$tablet}) {
+@mixin medium {
+  @media screen and (max-width: #{$tablet}) {
     @content;
   }
 }
 
 // Break on desktop
-@mixin large-breakpoint {
-  @media (min-width: #{$desktop}) {
+@mixin xs-large {
+  @media screen and (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+// Break on desktop
+@mixin x-large {
+  @media screen and (max-width: #{$large-desktop}) {
     @content;
   }
 }
@@ -57,4 +70,22 @@
   background: -webkit-linear-gradient($left-color, $right-color);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@mixin gradient-background($left-color, $right-color) {
+  background: -webkit-linear-gradient($left-color, $right-color);
+}
+
+@mixin scroll-text($width, $height, $url) {
+  display: inline-block;
+  width: $width;
+  height: $height;
+  background: url($url) 0 0 no-repeat;
+  position: absolute;
+  left: 10%;
+  top: calc(50% - #{$height / 2});
+
+  @media screen and (max-width: 1400px) {
+    display: none;
+  }
 }
