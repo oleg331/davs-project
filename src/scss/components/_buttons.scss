@@ -13,7 +13,7 @@ $btn-side-width: 71px;
   border-radius: 35px;
   min-width: 281px;
   height: 68px;
-  @include font(17px, $font-comfortaa-bold);
+  @include font(16px, $font-comfortaa-bold);
   line-height: 68px;
   cursor: pointer;
 
@@ -22,7 +22,6 @@ $btn-side-width: 71px;
     width: calc(100% - #{$btn-side-width});
     box-sizing: border-box;
     padding: 0 22px 0 10px;
-    letter-spacing: 0.6px;
   }
 
   .btn-side {
@@ -32,6 +31,7 @@ $btn-side-width: 71px;
 
   &.btn-yellow {
     position: relative;
+    outline: none;
     border: none;
     @include gradient-background(#fae275, #f5c357);
     color: #212121;
@@ -39,6 +39,7 @@ $btn-side-width: 71px;
     border-radius: 100px;
     line-height: 113px;
     overflow: hidden;
+    font-size: 17px;
 
     &:hover {
       &::after {
@@ -61,7 +62,9 @@ $btn-side-width: 71px;
 
     .btn-content {
       padding-right: 30px;
-      letter-spacing: 1.8px;
+      letter-spacing: 0.7px;
+      text-align: center;
+      margin: 1px 1px 0;
     }
 
     .btn-side {
@@ -86,6 +89,32 @@ $btn-side-width: 71px;
 
       .btn-side {
         line-height: 70px;
+      }
+    }
+
+    &.btn-transparent {
+      z-index: 1;
+      padding: 0;
+      display: block;
+
+      .btn-content {
+        background: #fff;
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+        border-radius: 100px;
+        overflow: hidden;
+        padding: 0;
+        margin: auto;
+      }
+
+      &:hover {
+        .btn-content {
+          @include gradient-background(#fae275, #f5c357);
+        }
+      }
+
+      &::after {
+        display: none;
       }
     }
   }

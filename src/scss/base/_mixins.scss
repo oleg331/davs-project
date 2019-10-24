@@ -4,6 +4,7 @@
     @content;
   }
 }
+
 // Media query for mobile first layout 
 @mixin small {
   @media screen and (max-width: #{$mobile}) {
@@ -87,5 +88,18 @@
 
   @media screen and (max-width: 1400px) {
     display: none;
+  }
+}
+
+@mixin circle-dot {
+  &::before {
+    content: '';
+    width: 4px;
+    border: 2px solid #8caae7;
+    display: inline-block;
+    border-radius: 50%;
+    height: 4px;
+    position: absolute;
+    left: 0;
   }
 }

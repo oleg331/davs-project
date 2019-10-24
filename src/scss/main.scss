@@ -16,7 +16,12 @@
 // Components
 //==============================================================================
 
+@import "components/slick";
+
+@import "components/layout";
+@import "components/buttons";
 @import "components/header";
 @import "components/furniture";
-@import "components/buttons";
-@import "components/layout";
+@import "components/object";
+@import "components/consultation";
+@import "components/work-time";

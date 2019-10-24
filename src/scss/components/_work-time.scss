@@ -1,0 +1,286 @@
+#work-time {
+    position: relative;
+    padding: 100px 0 0;
+    background: url(../images/work-time/bg-work-time.png);
+
+    .work-time-scroll-text {
+        @include scroll-text(18px, 678px, '../images/work-time/work-time-scroll-text.png');
+        top: 425px;
+    }
+}
+
+.step-general {
+    position: relative;
+    width: 72px;
+    height: 29px;
+    display: inline-block;
+    text-align: center;
+    @include font(#{13px/29px}, $font-comfortaa-bold);
+
+    &::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transform: skew(-8deg);
+        background: #e5e5e5;
+        border-radius: 5px;
+        z-index: -1;
+    }
+}
+
+.work-time-heading {
+    @include font(#{97px/84px}, $font-tryclother-black);
+    text-align: center;
+    max-width: 1060px;
+    margin: 0 auto;
+    padding-bottom: 48px;
+
+    span {
+        @include font(50px, $font-comfortaa-regular);
+        display: block;
+    }
+
+    strong {
+        @include gradient-color(#5582de, #4f6fb0);
+    }
+}
+
+.work-time-preheading {
+    text-align: center;
+    @include font(22px, $font-comfortaa-regular);
+    padding-bottom: 97px;
+}
+
+.work-time-tabs {
+    &-list {
+        display: flex;
+        @include font-family($font-comfortaa-regular);
+        box-sizing: border-box;
+        background: #f5f5f5;
+
+        &__item {
+            position: relative;
+            width: 20%;
+            height: 229px;
+            text-align: center;
+            border-radius: 15px 15px 0 0;
+            padding-top: 13px;
+            cursor: pointer;
+
+            &:not(.active),
+            &:not(:last-child) {
+                border-right: 1px solid #e7e7e7;
+            }
+
+            &:not(.active) * {
+                opacity: .7;
+                transition: 0.2s opacity;
+            }
+
+            &:hover {
+                * {
+                    opacity: 1;
+                }
+            }
+
+            &.active {
+                background: #fff;
+
+                .step-general {
+                    color: #fff;
+                    opacity: 1;
+
+                    &::before {
+                        @include gradient-background(#5582de, #4f6fb0);
+                    }
+                }
+            }
+
+            .step-general {
+                top: -28px;
+                z-index: 1;
+
+                &::before {
+                    @include gradient-background(#fae275, #f5c357);
+                }
+            }
+
+            h6 {
+                @include font(#{16px/20px}, $font-comfortaa-bold);
+                padding: 0 38px 10px;
+                min-height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .work-time-estimate {
+                font-size: 14px;
+            }
+        }
+
+        .icons-work-time {
+            width: 123px;
+            background: url(../images/work-time/icons-work-time.png) 0 0 no-repeat;
+            display: inline-block;
+
+            &.icon-project {
+                height: 77px;
+                background-position: 0 0;
+                margin-top: 13px;
+            }
+
+            &.icon-order {
+                height: 93px;
+                background-position: 0 -77px;
+                margin-bottom: 3px;
+            }
+
+            &.icon-build {
+                height: 79px;
+                background-position: 0 -172px;
+                margin-top: 17px;
+            }
+
+            &.icon-mounting {
+                height: 65px;
+                background-position: 0 -250px;
+                margin-top: 21px;
+            }
+
+            &.icon-service {
+                height: 92px;
+                background-position: 0 -316px;
+                margin-top: 3px;
+            }
+        }
+
+        .work-time-estimate {
+            display: flex;
+            align-items: center;
+            max-width: 150px;
+            margin: 0 auto;
+            justify-content: center;
+            height: 50px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            text-align: left;
+            line-height: 19px;
+
+            .icon-estimate {
+                display: inline-block;
+                min-width: 14px;
+                max-width: 14px;
+                height: 14px;
+                background: url(../images/work-time/icon-clock.png) 0 0 no-repeat;
+                margin-right: 14px;
+            }
+
+        }
+    }
+}
+
+.work-time-tabs-container {
+    background: #fff;
+    display: flex;
+
+    .step-general {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 30px;
+
+        &::before {
+            background: #e5e5e5;
+            color: #212121;
+        }
+    }
+
+    .work-time-tabs-content {
+        padding: 50px 30px 34px 101px;
+        box-sizing: border-box;
+        max-width: 678px;
+
+        h3 {
+            @include font(#{28px/38px}, $font-comfortaa-bold);
+            padding-bottom: 35px;
+        }
+
+        >p:first-of-type {
+            @include font(18px, $font-comfortaa-bold);
+            opacity: .5;
+            padding-bottom: 49px;
+        }
+
+        .work-time-tabs-content__list {
+            @include font(16px, $font-comfortaa-regular);
+            margin-bottom: 52px;
+
+            background-image: linear-gradient(#5582dc 16%, rgba(255, 255, 255, 0) 1%);
+            background-position: left;
+            background-size: 2px 9px;
+            background-repeat: repeat-y;
+            margin-left: 7px;
+
+            li {
+                display: flex;
+                line-height: 21px;
+                align-items: baseline;
+                margin-left: -7px;
+
+                &:not(:last-child) {
+                    padding-bottom: 15px;
+                }
+
+                .tab-index {
+                    margin-right: 42px;
+                    @include font(13px, $font-tryclother-black);
+                    color: #5582dc;
+                    line-height: 23px;
+                }
+
+                p {
+                    .icon-info {
+                        display: inline-block;
+                        width: 25px;
+                        height: 25px;
+                        background: url(../images/work-time/icon-info.png) 0 0 no-repeat;
+                        cursor: pointer;
+
+                        &:hover {
+                            opacity: .8;
+                        }
+                    }
+                }
+            }
+        }
+
+        .btn-general {
+            width: 344px;
+            margin-bottom: 39px;
+
+            .icon-next {
+                display: inline-block;
+                width: 17px;
+                height: 13px;
+                background: url(../images/work-time/icon-arrow-pointing-to-right.png) 0 0 no-repeat;
+                margin-left: 15px;
+            }
+        }
+
+        .work-time-process {
+            @include font(14px, $font-comfortaa-bold);
+            color: #5175bf;
+        }
+    }
+
+    .work-time-tabs-background {
+        width: 492px;
+        background: url(../images/work-time/bg-work-time-tabs.jpg) right bottom no-repeat;
+    }
+}

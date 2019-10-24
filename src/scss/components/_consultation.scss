@@ -1,0 +1,146 @@
+#consultation {
+    position: relative;
+    background: url(../images/consultation/bg-consultation.png) center top no-repeat;
+    background-size: cover;
+    padding: 83px 0 153px;
+
+    .consultation-scroll-text {
+        @include scroll-text(18px, 728px, '../images/consultation/scroll-text.png');
+        top: 150px;
+    }
+}
+
+.consultation-heading {
+    @include font(#{97px/86px}, $font-tryclother-black);
+    padding-bottom: 38px;
+    margin-left: -6px;
+
+    .gradient-color {
+        @include gradient-color(#5582de, #4f6fb0);
+    }
+
+    span,
+    strong {
+        color: #212121;
+    }
+
+    span:not(.gradient-color) {
+        display: block;
+    }
+
+    strong {
+        @include font(40px, $font-comfortaa-regular);
+        margin-top: 34px;
+        display: block;
+    }
+}
+
+.consultation-value {
+    position: relative;
+    @include font(22px, $font-comfortaa-regular);
+    padding-left: 40px;
+    margin-bottom: 51px;
+
+    strong {
+        text-decoration: line-through;
+    }
+
+    &::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        width: 21px;
+        height: 21px;
+        background: url(../images/consultation/icon-ruble.png) left center no-repeat;
+        opacity: .3;
+    }
+}
+
+.consultation-info {
+    border: 1px solid #d8e2f4;
+    border-radius: 15px;
+    box-sizing: border-box;
+    max-width: 591px;
+    padding: 33px 52px 50px;
+    margin-bottom: 49px;
+
+    h5 {
+        @include font(20px, $font-tryclother-bold);
+        margin-bottom: 23px;
+    }
+
+    &__list {
+        padding: 0 0 10px 7px;
+
+        &-item {
+            display: flex;
+            padding-bottom: 19px;
+
+            &-side {
+                padding-right: 20px;
+            }
+
+            p {
+                @include font(#{16px/24px}, $font-comfortaa-regular);
+                padding-top: 9px;
+            }
+        }
+    }
+
+    .icons-consultation {
+        background: url(../images/consultation/icons-consultation.png) left top no-repeat;
+        display: inline-block;
+        vertical-align: top;
+        width: 97px;
+
+        &.icon-materials {
+            height: 54px;
+            background-position: 0 0;
+        }
+
+        &.icon-time {
+            height: 55px;
+            background-position: 0 -64px;
+        }
+
+        &.icon-сost {
+            height: 55px;
+            background-position: 0 -149px;
+        }
+    }
+
+    &__more-link {
+        @include font(16px, $font-comfortaa-regular);
+        color: #5582dc;
+        margin-left: 25px;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.consultation-btn {
+    display: flex;
+
+    .btn-general {
+        min-width: 530px;
+        margin-right: 41px;
+        text-decoration: none;
+
+        .btn-content {
+            width: 100%;
+            text-align: center;
+            padding: 0;
+        }
+    }
+
+    &-info {
+        max-width: 300px;
+        padding: 41px 0 0 0;
+        line-height: 24px;
+        font-size: 14px;
+        letter-spacing: .7px;
+    }
+}
