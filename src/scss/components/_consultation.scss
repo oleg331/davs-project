@@ -1,16 +1,22 @@
 #consultation {
     position: relative;
-    background: url(../images/consultation/bg-consultation.png) center top no-repeat;
+    background: url(../images/consultation/bg-consultation.jpg) center top no-repeat;
     background-size: cover;
-    padding: 83px 0 153px;
+    padding: 83px 0 0;
 
     .consultation-scroll-text {
         @include scroll-text(18px, 728px, '../images/consultation/scroll-text.png');
         top: 150px;
     }
+
+    .wrapper {
+        position: relative;
+        padding-bottom: 153px;
+    }
 }
 
 .consultation-heading {
+    position: relative;
     @include font(#{97px/86px}, $font-tryclother-black);
     padding-bottom: 38px;
     margin-left: -6px;
@@ -37,6 +43,7 @@
 
 .consultation-value {
     position: relative;
+    position: relative;
     @include font(22px, $font-comfortaa-regular);
     padding-left: 40px;
     margin-bottom: 51px;
@@ -58,6 +65,7 @@
 }
 
 .consultation-info {
+    position: relative;
     border: 1px solid #d8e2f4;
     border-radius: 15px;
     box-sizing: border-box;
@@ -122,6 +130,7 @@
 }
 
 .consultation-btn {
+    position: relative;
     display: flex;
 
     .btn-general {
@@ -143,4 +152,13 @@
         font-size: 14px;
         letter-spacing: .7px;
     }
+}
+
+.consultation-designer {
+    width: 742px;
+    height: 1010px;
+    background: url(../images/consultation/img-designer.png) 0 0 no-repeat;
+    position: absolute;
+    bottom: 0;
+    right: -227px;
 }

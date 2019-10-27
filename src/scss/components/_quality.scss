@@ -1,0 +1,101 @@
+#quality {
+    position: relative;
+    background: url(../images/quality/bg-quality.jpg) center top no-repeat;
+    background-size: cover;
+    padding: 114px 0 0;
+
+    .wrapper {
+        position: relative;
+        padding-bottom: 152px;
+    }
+
+    .quality-head {
+        display: inline-block;
+        background: url(../images/quality/quality-head.png) 0 0 no-repeat;
+        width: 570px;
+        height: 910px;
+        position: absolute;
+        bottom: 0;
+        right: -94px;
+    }
+
+    .quality-scroll-text {
+        display: inline-block;
+        @include scroll-text(11px, 737px, '../images/quality/quality-scroll-text.png');
+        top: 152px;
+    }
+}
+
+.quality-heading {
+    @include font(#{97px/84px}, $font-tryclother-black);
+    max-width: 860px;
+    padding-bottom: 49px;
+
+    strong {
+        @include gradient-color(#5582de, #4f6fb0);
+    }
+
+    span {
+        @include font(#{50px/26px}, $font-comfortaa-regular);
+        color: #212121;
+        display: block;
+    }
+}
+
+.quality-preheading {
+    @include font(22px, $font-comfortaa-regular);
+    opacity: .5;
+    padding-bottom: 39px;
+}
+
+.quality-reasons {
+    max-width: 618px;
+    flex-flow: column wrap;
+    padding: 0;
+
+    li,
+    li:not(:last-child) {
+        padding: 25px 12px 29px 27px;
+        margin: 0 0 33px;
+        box-sizing: border-box;
+    }
+
+    .reasons-side {
+        padding-top: 4px;
+        padding-right: 21px;
+    }
+
+    .reasons-content {
+        padding-top: 0;
+
+        .reasons-heading {
+            white-space: inherit;
+            font-size: 17px;
+            max-width: 360px;
+            line-height: 23px;
+            padding-bottom: 9px;
+        }
+
+        p {
+            font-size: 14px;
+            max-width: 420px;
+            line-height: 22px;
+        }
+    }
+
+    .icons-quality {
+        display: inline-block;
+        background: url(../images/quality/icons-quality.png) 0 0 no-repeat;
+        width: 123px;
+
+        &.icon-materials {
+            height: 90px;
+            background-position: 0 0;
+        }
+
+        &.icon-experience {
+            height: 91px;
+            background-position: 0 -90px;
+        }
+    }
+}

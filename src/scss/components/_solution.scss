@@ -1,0 +1,109 @@
+#solution {
+    position: relative;
+    padding: 80px 0 149px;
+
+    .clip {
+        display: inline-block;
+        width: 423px;
+        height: 407px;
+        background: url(../images/solution/clip.png) left bottom no-repeat;
+        position: absolute;
+        left: -6px;
+        top: -221px;
+    }
+}
+
+.solution-head {
+    text-align: center;
+}
+
+.solution-heading {
+    @include font(80px, $font-tryclother-black);
+    line-height: 78px;
+    padding-bottom: 34px;
+
+    span {
+        display: block;
+    }
+
+    strong:first-of-type {
+        @include gradient-color(#5582de, #4f6fb0);
+    }
+
+    strong:last-of-type {
+        @include font(30px, $font-comfortaa-regular);
+        display: block;
+        padding-top: 31px;
+    }
+}
+
+.solution-preheading {
+    @include font(#{22px/36px}, $font-comfortaa-regular);
+    opacity: .5;
+    max-width: 990px;
+    margin: 0 auto;
+    padding-bottom: 43px;
+}
+
+.reason-solution {
+    display: inline-block;
+    @include font(18px, $font-comfortaa-regular);
+    color: #5584dc;
+    margin-bottom: 80px;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.slider-solution {}
+
+.review-solution {
+    text-align: center;
+    max-width: 535px;
+    margin: 0 auto;
+
+    &__img {
+        position: relative;
+        padding: 5px;
+        width: 77px;
+        height: 77px;
+        margin: 0 auto;
+        padding-bottom: 26px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: calc(100% + 6px);
+            height: calc(100% + 6px);
+            left: -3px;
+            top: -3px;
+            border: 1px solid rgba(85, 130, 220, .1);
+            border-radius: 100%;
+        }
+
+        &-inner {
+            width: 77px;
+            height: 77px;
+            border-radius: 100%;
+            overflow: hidden;
+
+            img {
+                object-fit: cover;
+                max-width: 100%;
+                max-height: 100%;
+                display: block;
+            }
+        }
+    }
+
+    p {
+        line-height: 30px;
+        padding-bottom: 29px;
+
+    }
+
+    &__author-quote {
+        color: #cecece;
+    }
+}

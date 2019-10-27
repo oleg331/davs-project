@@ -1,0 +1,211 @@
+#custom-production {
+    position: relative;
+    padding: 81px 0 139px;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 482px;
+        border-left: 1px solid #e9f4fc;
+        border-right: 1px solid #e9f4fc;
+        z-index: -1;
+    }
+
+    &::before {
+        left: 12%;
+    }
+
+    &::after {
+        right: 12%;
+    }
+
+    .scroll-text-production {
+        @include scroll-text(14px, 695px, '../images/production/production-scroll-text.png');
+        left: inherit;
+        right: 10%;
+        top: 155px;
+    }
+}
+
+.custom-production-heading {
+    @include font-family($font-tryclother-black);
+    font-size: 97px;
+    text-align: center;
+    line-height: 84px;
+    padding-bottom: 52px;
+
+    span {
+        font-size: 50px;
+        @include gradient-color(#5582de, #4f6fb0);
+        display: block;
+        line-height: 70px;
+    }
+}
+
+.custom-production-preheading {
+    @include font(16px, $font-comfortaa-regular);
+    opacity: .5;
+    text-align: center;
+    padding-bottom: 65px;
+}
+
+.production-reasons {
+    padding: 0 0 56px;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    >li,
+    >li:nth-child(2n+2) {
+        padding: 15px 16px 0 27px;
+        width: calc(50% - 44px);
+        overflow: hidden;
+        box-sizing: border-box;
+        border-color: #e9f4fc;
+        background: #fff;
+    }
+
+    >li:not(:last-child) {
+        margin-right: 0;
+    }
+
+    >li:first-child {
+        margin-right: 85px;
+    }
+
+    a {
+        color: #5582dc;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .reasons-side {
+        padding-right: 42px;
+    }
+
+    .reasons-content {
+        padding-top: 13px;
+
+        h4 {
+            white-space: inherit;
+            line-height: 30px;
+        }
+    }
+
+    .icons-production {
+        display: inline-block;
+        background: url(../images/production/icons-production.png) 0 0 no-repeat;
+
+        &.icon-points {
+            width: 117px;
+            height: 123px;
+            background-position: 0 0;
+        }
+
+        &.icon-master {
+            width: 133px;
+            height: 149px;
+            background-position: 0 -123px;
+            margin-bottom: -4px;
+        }
+    }
+
+    li.production-reasons,
+    li.production-reasons li {
+        border: none;
+    }
+
+    li.production-reasons {
+        padding: 15px 0 0 0;
+        background: none;
+
+        h4 {
+            color: #5582dc;
+            @include font(16px, $font-comfortaa-bold);
+            text-align: center;
+            padding-top: 29px;
+        }
+
+        .header-list {
+            display: flex;
+            font-size: 14px;
+            white-space: nowrap;
+            justify-content: center;
+            width: 100%;
+
+            li:first-child {
+                margin-right: 0;
+            }
+
+            li,
+            li:nth-child(2n+2) {
+                position: relative;
+                display: flex;
+                @include circle-dot;
+                align-items: center;
+                padding-left: 20px;
+                padding-right: 0;
+                width: 33%;
+
+                &::before {
+                    border-color: #5582dc;
+                }
+            }
+        }
+    }
+}
+
+.production-points {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+
+    &__block {
+        position: relative;
+        text-align: center;
+        width: 48%;
+
+        &--img-bg {
+            display: inline-block;
+            position: absolute;
+
+            &.table {
+                width: 536px;
+                height: 416px;
+                background: url(../images/production/img-table.png) 0 0 no-repeat;
+                left: -422px;
+                top: -31px;
+                z-index: -1;
+            }
+
+            &.flowers {
+                width: 574px;
+                height: 311px;
+                background: url(../images/production/img-flower.png) 0 0 no-repeat;
+                right: -299px;
+                bottom: 60px;
+            }
+        }
+
+        &-img {
+            padding-bottom: 25px;
+
+            img {
+                pointer-events: none;
+                position: relative;
+                z-index: -1;
+            }
+        }
+
+        p {
+            @include font(#{16px/30px}, $font-comfortaa-regular);
+            padding: 0 16px;
+            position: relative;
+        }
+    }
+}
