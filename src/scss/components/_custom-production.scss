@@ -1,6 +1,7 @@
 #custom-production {
     position: relative;
     padding: 81px 0 139px;
+    overflow: hidden;
 
     &::before,
     &::after {
