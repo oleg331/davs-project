@@ -1,0 +1,44 @@
+#copyrights {
+    @include font(#{15px/24px}, $font-comfortaa-regular);
+    padding-bottom: 60px;
+
+    .wrapper {
+        padding-top: 8px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.copyright {
+    padding: 15px 0 0 2px;
+
+    span {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    a {
+        color: rgba(33, 33, 33, .4);
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+#author {
+    display: flex;
+    align-items: center;
+
+    span {
+        margin-top: 12px;
+    }
+
+    a {
+        margin-left: 14px;
+
+        img {
+            display: block;
+        }
+    }
+}

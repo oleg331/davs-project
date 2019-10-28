@@ -1,0 +1,285 @@
+#catalog {
+    position: relative;
+    background: url(../images/work-time/bg-work-time.png);
+    padding: 57px 0 151px;
+
+    .catalog-album {
+        background: #000;
+        width: 1846px;
+        height: 1368px;
+        background: url(../images/catalog/album.png) 0 0 no-repeat;
+        position: absolute;
+        top: 536px;
+        left: -77px;
+        z-index: -1;
+    }
+}
+
+.catalog-heading {
+    text-align: center;
+    @include font(#{97px/84px}, $font-tryclother-black);
+    max-width: 970px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+
+    span {
+        @include font(50px, $font-comfortaa-regular);
+    }
+
+    strong {
+        @include gradient-color(#5582de, #4f6fb0);
+    }
+}
+
+.catalog-preheading {
+    text-align: center;
+    padding-bottom: 87px;
+    @include font(22px, $font-comfortaa-regular);
+}
+
+.catalog-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    * {
+        text-decoration: none;
+    }
+
+    .catalog-pdf {
+        @include font(14px, $font-comfortaa-bold);
+        @include gradient-background(#5582de, #4f6fb0);
+        color: #fff;
+        border-radius: 100%;
+        width: 133px;
+        height: 133px;
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+        margin: 140px 0 0 60px;
+        box-sizing: border-box;
+        padding-top: 24px;
+    }
+
+    .icon-pdf {
+        display: inline-block;
+        width: 39px;
+        height: 44px;
+        background: url(../images/catalog/icon-pdf.png) 0 0 no-repeat;
+        margin-bottom: 13px;
+    }
+}
+
+.catalog__form-socials {
+    display: flex;
+    @include font(14px, $font-comfortaa-bold);
+    text-align: center;
+    justify-content: space-between;
+    padding-bottom: 46px;
+
+    li {
+        width: 81px;
+
+        a {
+            width: 100%;
+            position: relative;
+            display: inline-block;
+            padding-top: 68px;
+            color: #212121;
+
+            * {
+                text-decoration: none;
+            }
+
+            &:hover {
+                span {
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    width: 61px;
+                    height: 61px;
+                }
+            }
+
+            span {
+                position: absolute;
+                left: 7px;
+                top: 7px;
+                right: 7px;
+                width: 46px;
+                height: 46px;
+                margin: 0 auto;
+                display: inline-block;
+                border-radius: 100%;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: 0.2s left, 0.2s top, 0.2s right;
+            }
+        }
+    }
+
+    .icons-social {
+        display: inline-block;
+        background: url(../images/catalog/icons-social.png) 0 0 no-repeat;
+        width: 19px;
+    }
+
+    .icon-viber {
+        a:hover {
+            span {
+                background: #874cc3;
+            }
+        }
+
+        span {
+            background: -webkit-linear-gradient(#f363f3, #874cc3);
+        }
+
+        i {
+            background-position: 0 0;
+            height: 18px;
+        }
+    }
+
+    .icon-telegram {
+        a:hover {
+            span {
+                background: #449cce;
+            }
+        }
+
+        span {
+            background: -webkit-linear-gradient(#63d6f3, #449cce);
+        }
+
+        i {
+            background-position: 0 -18px;
+            height: 17px;
+        }
+    }
+
+    .icon-whatsapp {
+        a:hover {
+            span {
+                background: #2cb767;
+            }
+        }
+
+        span {
+            background: -webkit-linear-gradient(#63f38f, #2cb767);
+        }
+
+        i {
+            background-position: 0 -35px;
+            height: 17px;
+        }
+    }
+
+    .icon-email {
+        a:hover {
+            span {
+                background: #ff8c47;
+            }
+        }
+
+        span {
+            background: -webkit-linear-gradient(#ffc853, #ff8c47);
+        }
+
+        i {
+            background-position: 0 -52px;
+            height: 15px;
+        }
+    }
+
+}
+
+.catalog__form {
+    position: relative;
+    background: #fff;
+    border-radius: 20px;
+    width: 496px;
+    box-shadow: 0px 9px 123.75px 1.25px rgba(96, 96, 96, 0.09);
+    box-sizing: border-box;
+    padding: 69px 61px 66px;
+
+    * {
+        position: relative;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        right: 8px;
+        bottom: 8px;
+        border: 1px solid #eef2fb;
+        border-radius: 20px;
+    }
+
+    h5 {
+        text-align: center;
+        @include font(#{20px/26px}, $font-comfortaa-bold);
+        max-width: 235px;
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+
+    .catalog__form_group {
+        padding: 0 14px;
+        display: block;
+        display: flex;
+
+        &:not(:last-of-type) {
+            padding-bottom: 27px;
+        }
+
+        .input-general {
+            text-align: center;
+            width: 100%;
+            outline: none;
+            border: none;
+            background: #f3f3f3;
+            color: rgba(33, 33, 33, .5);
+            height: 113px;
+            border-radius: 100px;
+            line-height: 113px;
+            overflow: hidden;
+            font-size: 17px;
+            box-sizing: border-box;
+            padding: 0 25px;
+            box-shadow: inset 0px 3px 5px 0px rgba(26, 26, 26, 0.08);
+            @include font(15px, $font-comfortaa-regular);
+        }
+
+        .btn-general {
+            width: 100%;
+
+            .btn-content {
+                padding: 0 10px;
+                width: 100%;
+            }
+        }
+
+        p {
+            @include font(#{14px/20px}, $font-comfortaa-regular);
+
+            span {
+                display: block;
+                color: #b1b1b1;
+            }
+
+            a {
+                color: #5582dc;
+                text-decoration: underline;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
