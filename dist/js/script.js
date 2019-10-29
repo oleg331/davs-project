@@ -56,3 +56,10 @@ $('.object-list-item a').on('click', function() {
   //     .get(0)
   //     .slick.setPosition();
 });
+
+// solutions
+
+$(`.slider-solution__container`).slick({
+  slidesToShow: 1,
+  slidesToScroll: 1
+});
