@@ -89,6 +89,19 @@
 
         &__content {
             width: calc(100% + 45px);
+            position: relative;
+
+            &::after {
+                content: '';
+                display: block;
+                width: 43px;
+                height: 100%;
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                background: #fff;
+            }
 
             .img-container {
                 position: relative;

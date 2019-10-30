@@ -55,6 +55,7 @@
             height: 58px;
             text-align: center;
             line-height: 58px;
+            outline: none;
 
             &:hover {
                 @include gradient-background(#fae275, #f5c357);
@@ -62,7 +63,7 @@
             }
         }
 
-        &.active {
+        &.ui-tabs-active {
             a {
                 @include gradient-background(#fae275, #f5c357);
                 color: #212121;
