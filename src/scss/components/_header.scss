@@ -236,5 +236,10 @@
       background: url(../images/header/icon-calculator.png) 0 0 no-repeat;
       margin-left: -10px;
     }
+
+    @include medium {
+      line-height: 51px;
+      max-width: 100%;
+    }
   }
 }

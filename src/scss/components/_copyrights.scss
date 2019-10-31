@@ -7,10 +7,24 @@
         display: flex;
         justify-content: space-between;
     }
+
+    @include small {
+        padding-bottom: 30px;
+
+        .wrapper {
+            flex-flow: column wrap;
+            align-items: center;
+            text-align: center;
+        }
+    }
 }
 
 .copyright {
     padding: 15px 0 0 2px;
+
+    @include small {
+        padding: 15px 0 10px 0px;
+    }
 
     span {
         display: block;

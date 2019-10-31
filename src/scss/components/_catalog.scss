@@ -13,6 +13,29 @@
         top: 536px;
         left: 0;
         z-index: -1;
+
+    }
+
+    @include x-large {
+        padding: 4vw 0 13vw;
+
+        .catalog-album {
+            top: 40vw;
+            background-size: cover;
+            max-width: 100%;
+            height: 100vw;
+        }
+    }
+
+    @include small {
+        padding: 20px;
+
+        .catalog-album {
+            top: 70vw;
+            background-size: cover;
+            max-width: 100%;
+            height: 100vw;
+        }
     }
 }
 
@@ -30,18 +53,53 @@
     strong {
         @include gradient-color(#5582de, #4f6fb0);
     }
+
+    @include x-large {
+        font-size: 8.3vw;
+        line-height: 7vw;
+        padding-bottom: 4vw;
+
+        span {
+            font-size: 4.4vw;
+            padding-top: 2.2vw;
+            display: block;
+        }
+    }
+
+    @include small {
+        font-size: 32px;
+        line-height: 28px;
+        padding-bottom: 30px;
+        max-width: 420px;
+        margin: 0 auto;
+
+        span {
+            padding-top: 10px;
+            font-size: 16px;
+        }
+    }
 }
 
 .catalog-preheading {
     text-align: center;
     padding-bottom: 87px;
     @include font(22px, $font-comfortaa-regular);
+
+    @include small {
+        font-size: 16px;
+        line-height: 24px;
+        padding-bottom: 37px;
+    }
 }
 
 .catalog-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    @include x-large {
+        justify-content: center;
+    }
 
     * {
         text-decoration: none;
@@ -60,6 +118,10 @@
         margin: 140px 0 0 60px;
         box-sizing: border-box;
         padding-top: 24px;
+
+        @include x-large {
+            display: none;
+        }
     }
 
     .icon-pdf {
@@ -205,6 +267,14 @@
     box-shadow: 0px 9px 123.75px 1.25px rgba(96, 96, 96, 0.09);
     box-sizing: border-box;
     padding: 69px 61px 66px;
+
+    @include small {
+        padding: 29px 20px 36px;
+    }
+
+    @include xs-small {
+        padding: 29px 10px 36px;
+    }
 
     * {
         position: relative;

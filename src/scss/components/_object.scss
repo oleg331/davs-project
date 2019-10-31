@@ -1,6 +1,21 @@
 #object {
     padding: 90px 0 151px;
     background: url(../images/object/img-table.png) left -11px bottom 15px no-repeat;
+
+    @include x-large {
+        padding-top: 7vw;
+        padding-bottom: 12vw;
+
+        .wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+    }
+
+    @include small {
+        padding-top: 30px;
+        padding-bottom: 0;
+    }
 }
 
 .object {
@@ -17,6 +32,31 @@
             @include gradient-color(#5582de, #4f6fb0);
             line-height: 65px;
         }
+
+        @include x-large {
+            font-size: 4.4vw;
+            padding-top: 2.2vw;
+            line-height: 5vw;
+
+            span {
+                font-size: 8.3vw;
+                line-height: 7vw;
+                padding-bottom: 4vw;
+            }
+        }
+
+        @include small {
+            padding-top: 10px;
+            font-size: 16px;
+
+            span {
+                font-size: 32px;
+                line-height: 28px;
+                padding-bottom: 30px;
+                max-width: 420px;
+                margin: 0 auto;
+            }
+        }
     }
 
     &-preheading {
@@ -26,6 +66,11 @@
         margin: 0 auto;
         line-height: 36px;
         padding-bottom: 52px;
+
+        @include medium {
+            font-size: 16px;
+            line-height: 24px;
+        }
     }
 
     &-tabs-heading {
@@ -34,6 +79,14 @@
         overflow: hidden;
         margin-bottom: 39px;
         @include font(16px, $font-comfortaa-bold);
+
+        @include x-large {
+            margin: 0 auto 39px;
+        }
+
+        @include medium {
+            flex-flow: row wrap;
+        }
     }
 
     &-list-item {
@@ -42,6 +95,10 @@
         color: #f5f5f5;
         border-radius: 10px;
         transition: 0.2s;
+
+        @include x-large {
+            width: 50%;
+        }
 
         &.ui-tabs-active,
         &:hover {
@@ -72,6 +129,12 @@
 
     &-tabs-container {
         display: flex;
+
+        @include x-large {
+            flex-flow: column wrap;
+            align-items: center;
+            flex-direction: column-reverse;
+        }
     }
 
     &-slider {
@@ -79,17 +142,38 @@
         padding-top: 10px;
         min-width: 587px;
         width: 587px;
+        max-width: 100%;
         margin-right: 77px;
+
+        @include x-large {
+            margin-bottom: 50px;
+            margin-right: 0;
+        }
+
+        @include medium {
+            min-width: inherit;
+        }
 
         &__slide {
             border-radius: 15px;
             overflow: hidden;
             margin-bottom: 24px;
+
+            img {
+                @include medium {
+                    width: 100%;
+                    height: auto;
+                }
+            }
         }
 
         &__content {
             width: calc(100% + 45px);
             position: relative;
+
+            @include medium {
+                display: none;
+            }
 
             &::after {
                 content: '';
@@ -172,10 +256,33 @@
             &.arrow-next {
                 right: -20px;
             }
+
+            @include medium {
+                & {
+                    top: calc(50% - 22px);
+                }
+
+                &.arrow-prev {
+                    left: 5px;
+                }
+
+                &.arrow-next {
+                    right: 5px;
+                }
+            }
         }
     }
 
     &-tabs-content {
+
+        @include x-large {
+            background: #fff;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0px 9px 123.75px 1.25px rgba(96, 96, 96, 0.09);
+            margin-bottom: 30px;
+        }
+
         &-block {
             padding-bottom: 19px;
         }

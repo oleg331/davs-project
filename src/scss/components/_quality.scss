@@ -3,6 +3,7 @@
     background: url(../images/quality/bg-quality.jpg) center top no-repeat;
     background-size: cover;
     padding: 114px 0 0;
+    overflow: hidden;
 
     .wrapper {
         position: relative;
@@ -17,12 +18,32 @@
         position: absolute;
         bottom: 0;
         right: -94px;
+
+        @include x-large {
+            display: none;
+        }
     }
 
     .quality-scroll-text {
         display: inline-block;
         @include scroll-text(11px, 737px, '../images/quality/quality-scroll-text.png');
         top: 152px;
+    }
+
+    @include x-large {
+        padding-top: 9vw;
+
+        .wrapper {
+            padding-bottom: 12vw;
+        }
+    }
+
+    @include small {
+        padding-top: 20px;
+
+        .wrapper {
+            padding-bottom: 20px;
+        }
     }
 }
 
@@ -40,12 +61,51 @@
         color: #212121;
         display: block;
     }
+
+    @include x-large {
+        font-size: 8.3vw;
+        line-height: 7vw;
+        padding-bottom: 4vw;
+        text-align: center;
+        margin: 0 auto;
+
+        span {
+            font-size: 4.4vw;
+            padding-top: 2.2vw;
+        }
+    }
+
+    @include small {
+        font-size: 32px;
+        line-height: 28px;
+        padding-bottom: 30px;
+        max-width: 420px;
+        margin: 0 auto;
+        text-align: center;
+
+        span {
+            padding-top: 10px;
+            font-size: 16px;
+        }
+    }
 }
 
 .quality-preheading {
     @include font(22px, $font-comfortaa-regular);
     opacity: .5;
     padding-bottom: 39px;
+
+    @include x-large {
+        text-align: center;
+    }
+
+    @include small {
+        font-size: 14px;
+        line-height: 20px;
+        max-width: 420px;
+        margin: 0 auto;
+        text-align: center;
+    }
 }
 
 .quality-reasons {
@@ -53,11 +113,39 @@
     flex-flow: column wrap;
     padding: 0;
 
+    @include x-large {
+        flex-flow: row;
+        max-width: inherit;
+    }
+
+    @include small {
+        flex-flow: column wrap;
+    }
+
     li,
     li:not(:last-child) {
         padding: 25px 12px 29px 27px;
         margin: 0 0 33px;
         box-sizing: border-box;
+
+        @include x-large {
+            width: calc(50% - 10px);
+        }
+
+        @include small {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+
+    @include x-large {
+        li:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        @include small {
+            margin-right: 0;
+        }
     }
 
     .reasons-side {
@@ -74,6 +162,10 @@
             max-width: 360px;
             line-height: 23px;
             padding-bottom: 9px;
+
+            @include small {
+                margin: 0 auto;
+            }
         }
 
         p {

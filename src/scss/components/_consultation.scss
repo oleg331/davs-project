@@ -33,6 +33,29 @@
         right: 0;
         top: -415px;
     }
+
+    @include x-large {
+        padding-top: 5vw;
+
+        .stapler,
+        .document,
+        .consultation-designer {
+            display: none;
+        }
+
+        .wrapper {
+            padding-bottom: 50px;
+        }
+    }
+
+    @include medium {
+        padding-top: 0;
+
+        .wrapper {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
 }
 
 .consultation-heading {
@@ -59,14 +82,51 @@
         margin-top: 34px;
         display: block;
     }
+
+    @include x-large {
+        span {
+            font-size: 8.3vw;
+            line-height: 7vw;
+
+            &:last-of-type {
+                padding-bottom: 0;
+            }
+        }
+
+        strong {
+            font-size: 4.4vw;
+            padding-top: 2.2vw;
+        }
+    }
+
+    @include small {
+        text-align: center;
+        margin-left: 0;
+
+        span {
+            font-size: 32px;
+            line-height: 28px;
+            max-width: 420px;
+            margin: 0 auto;
+            display: inline-block;
+        }
+
+        strong {
+            font-size: 16px;
+            margin-top: 0;
+        }
+    }
 }
 
 .consultation-value {
     position: relative;
-    position: relative;
     @include font(22px, $font-comfortaa-regular);
     padding-left: 40px;
     margin-bottom: 51px;
+
+    @include medium {
+        font-size: 16px;
+    }
 
     strong {
         text-decoration: line-through;
@@ -93,9 +153,22 @@
     padding: 33px 52px 50px;
     margin-bottom: 49px;
 
+    @include x-large {
+        max-width: inherit;
+    }
+
+    @include medium {
+        padding: 13px 22px 20px;
+        margin-bottom: 19px;
+    }
+
     h5 {
         @include font(20px, $font-tryclother-bold);
         margin-bottom: 23px;
+
+        @include medium {
+            text-align: center;
+        }
     }
 
     &__list {
@@ -104,6 +177,11 @@
         &-item {
             display: flex;
             padding-bottom: 19px;
+
+            @include medium {
+                flex-flow: column wrap;
+                text-align: center;
+            }
 
             &-side {
                 padding-right: 20px;
@@ -153,10 +231,21 @@
     position: relative;
     display: flex;
 
+    @include x-large {
+        flex-flow: column wrap;
+        align-items: center;
+    }
+
     .btn-general {
         min-width: 530px;
         margin-right: 41px;
         text-decoration: none;
+
+        @include medium {
+            line-height: 70px;
+            min-width: inherit;
+            margin: 0 auto;
+        }
 
         .btn-content {
             width: 100%;
@@ -171,6 +260,15 @@
         line-height: 24px;
         font-size: 14px;
         letter-spacing: .7px;
+
+        @include xs-large {
+            padding: 12px 22px 20px;
+            margin-bottom: 19px;
+        }
+
+        @include medium {
+            text-align: center;
+        }
     }
 }
 

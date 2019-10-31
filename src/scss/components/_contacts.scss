@@ -25,6 +25,37 @@
             color: rgba(33, 33, 33, .2);
         }
     }
+
+    @include x-large {
+        font-size: 8.3vw;
+        line-height: 7vw;
+        padding-bottom: 4vw;
+
+        strong {
+            font-size: 4.4vw;
+            padding-top: 2.2vw;
+            display: block;
+        }
+
+        span {
+            font-size: 2.5vw;
+            line-height: 3.5vw;
+            margin-top: 3vw;
+        }
+    }
+
+    @include small {
+        font-size: 32px;
+        line-height: 28px;
+        padding-bottom: 30px;
+        max-width: 420px;
+        margin: 0 auto;
+
+        strong {
+            padding-top: 10px;
+            font-size: 16px;
+        }
+    }
 }
 
 .contacts-preheading {
@@ -32,6 +63,12 @@
     color: #5582dc;
     display: inline-block;
     margin-bottom: 55px;
+
+    @include small {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 20px;
+    }
 
     &:hover {
         text-decoration: none;
@@ -43,6 +80,11 @@
     justify-content: center;
     @include font-family($font-comfortaa-bold);
     padding-bottom: 53px;
+
+    @include small {
+        font-size: 14px;
+        padding-bottom: 13px;
+    }
 
     li {
         a {
@@ -56,6 +98,12 @@
             text-align: center;
             line-height: 58px;
             outline: none;
+
+            @include small {
+                min-width: 162px;
+                height: 38px;
+                line-height: 38px;
+            }
 
             &:hover {
                 @include gradient-background(#fae275, #f5c357);
@@ -93,6 +141,18 @@
         border-radius: 10px !important;
     }
 
+    @include medium {
+        >ymaps {
+            height: 400px !important;
+        }
+    }
+
+    @include small {
+        >ymaps {
+            height: 300px !important;
+        }
+    }
+
     .contacts-inner {
         background: #fff;
         border-radius: 20px;
@@ -119,6 +179,25 @@
             bottom: 8px;
             border: 1px solid #eef2fb;
             border-radius: 20px;
+        }
+
+        @include medium {
+            position: relative;
+            left: inherit;
+            top: inherit;
+            width: 100%;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            border-radius: 20px 20px 0 0;
+
+            &::before {
+                border-radius: 20px 20px 0 0;
+            }
+        }
+
+        @include small {
+            padding: 26px 23px 21px;
         }
 
         &__list {

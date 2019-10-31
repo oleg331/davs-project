@@ -14,6 +14,22 @@
         overflow: hidden;
         padding-bottom: 187px;
     }
+
+    @include x-large {
+        padding-top: 9vw;
+
+        .wrapper {
+            padding-bottom: 120px;
+        }
+    }
+
+    @include small {
+        padding-top: 20px;
+
+        .wrapper {
+            padding-bottom: 87px;
+        }
+    }
 }
 
 .step-general {
@@ -54,12 +70,39 @@
     strong {
         @include gradient-color(#5582de, #4f6fb0);
     }
+
+    @include x-large {
+        font-size: 8.3vw;
+        line-height: 7vw;
+        padding-bottom: 4vw;
+
+        span {
+            font-size: 4.4vw;
+            padding-bottom: 0;
+        }
+    }
+
+    @include small {
+        font-size: 32px;
+        line-height: 28px;
+        padding-bottom: 30px;
+        max-width: 420px;
+        margin: 0 auto;
+
+        span {
+            font-size: 16px;
+        }
+    }
 }
 
 .work-time-preheading {
     text-align: center;
     @include font(22px, $font-comfortaa-regular);
     padding-bottom: 97px;
+
+    @include small {
+        font-size: 14px;
+    }
 }
 
 .work-time-tabs {
@@ -88,8 +131,21 @@
         box-sizing: border-box;
         background: #f5f5f5;
 
+        @include medium {
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+
         &__item {
             width: 20%;
+
+            @include medium {
+                width: calc(100% / 3);
+            }
+
+            @include xs-small {
+                width: 50%;
+            }
 
             a {
                 outline: none;
@@ -101,11 +157,23 @@
                 border-radius: 15px 15px 0 0;
                 padding-top: 13px;
                 cursor: pointer;
+
+                @include medium {
+                    height: 150px;
+                }
+
+                @include small {
+                    height: 130px;
+                }
             }
 
             &:not(.ui-tabs-active),
             &:not(:last-child) {
                 border-right: 1px solid #e7e7e7;
+
+                @include medium {
+                    border-right: 0;
+                }
             }
 
             &:not(.ui-tabs-active) * {
@@ -148,6 +216,10 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
+                @include small {
+                    @include font(#{14px/14px}, $font-comfortaa-bold);
+                }
             }
 
             .work-time-estimate {
@@ -159,6 +231,10 @@
             width: 123px;
             background: url(../images/work-time/icons-work-time.png) 0 0 no-repeat;
             display: inline-block;
+
+            @include medium {
+                display: none;
+            }
 
             &.icon-project {
                 height: 77px;
@@ -214,6 +290,16 @@
                 margin-right: 14px;
             }
 
+            @include medium {
+                flex-flow: column wrap;
+                height: 70px;
+                text-align: center;
+
+                .icon-estimate {
+                    margin: 0;
+                }
+            }
+
         }
     }
 }
@@ -240,6 +326,18 @@
         padding: 50px 30px 34px 101px;
         box-sizing: border-box;
         max-width: 678px;
+
+        @include x-large {
+            max-width: inherit;
+        }
+
+        @include medium {
+            padding: 30px 20px 34px;
+        }
+
+        @include small {
+            width: 100%;
+        }
 
         h3 {
             @include font(#{28px/38px}, $font-comfortaa-bold);
@@ -298,6 +396,11 @@
         .btn-general {
             width: 344px;
             margin-bottom: 39px;
+            max-width: 100%;
+
+            @include medium {
+                line-height: 70px;
+            }
         }
 
         .work-time-process {
@@ -310,5 +413,9 @@
         width: 492px;
         background: url(../images/work-time/bg-work-time-tabs.jpg) right top no-repeat;
         background-size: cover;
+
+        @include x-large {
+            display: none;
+        }
     }
 }

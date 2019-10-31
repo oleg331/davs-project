@@ -29,6 +29,19 @@
         right: 10%;
         top: 155px;
     }
+
+    @include medium {
+        padding: 0 0 70px;
+
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+
+    @include small {
+        padding: 0 0 30px;
+    }
 }
 
 .custom-production-heading {
@@ -44,6 +57,29 @@
         display: block;
         line-height: 70px;
     }
+
+    @include x-large {
+        font-size: 8.3vw;
+        line-height: 7vw;
+        padding-bottom: 4vw;
+
+        span {
+            line-height: 5vw;
+            font-size: 4.4vw;
+        }
+    }
+
+    @include small {
+        font-size: 32px;
+        line-height: 28px;
+        padding-bottom: 30px;
+        max-width: 420px;
+        margin: 0 auto;
+
+        span {
+            font-size: 16px;
+        }
+    }
 }
 
 .custom-production-preheading {
@@ -51,6 +87,10 @@
     opacity: .5;
     text-align: center;
     padding-bottom: 65px;
+
+    @include small {
+        font-size: 14px;
+    }
 }
 
 .production-reasons {
@@ -66,6 +106,18 @@
         box-sizing: border-box;
         border-color: #e9f4fc;
         background: #fff;
+
+        @include x-large {
+            padding-bottom: 10px;
+        }
+
+        @include medium {
+            width: calc(50% - 10px);
+        }
+
+        @include small {
+            width: 100%;
+        }
     }
 
     >li:not(:last-child) {
@@ -74,10 +126,22 @@
 
     >li:first-child {
         margin-right: 85px;
+
+        @include medium {
+            margin-right: 10px;
+        }
+
+        @include small {
+            margin-right: 0;
+        }
     }
 
     a {
         color: #5582dc;
+
+        @include small {
+            font-size: 12px;
+        }
 
         &:hover {
             text-decoration: none;
@@ -94,6 +158,11 @@
         h4 {
             white-space: inherit;
             line-height: 30px;
+
+            @include small {
+                font-size: 14px;
+                line-height: 20px;
+            }
         }
     }
 
@@ -124,11 +193,19 @@
         padding: 15px 0 0 0;
         background: none;
 
+        @include small {
+            align-items: flex-start;
+        }
+
         h4 {
             color: #5582dc;
             @include font(16px, $font-comfortaa-bold);
             text-align: center;
             padding-top: 29px;
+
+            @include small {
+                text-align: left;
+            }
         }
 
         .header-list {
@@ -137,6 +214,11 @@
             white-space: nowrap;
             justify-content: center;
             width: 100%;
+
+            @include x-large {
+                flex-flow: column wrap;
+                align-items: center;
+            }
 
             li:first-child {
                 margin-right: 0;
@@ -152,6 +234,20 @@
                 padding-right: 0;
                 width: 33%;
 
+                @include x-large {
+                    padding: 10px 0 0 20px;
+                }
+
+                @include medium {
+                    width: inherit;
+                    align-items: flex-start;
+                }
+
+                @include small {
+                    padding: 10px 0 0 20px;
+                    margin-bottom: 0;
+                }
+
                 &::before {
                     border-color: #5582dc;
                 }
@@ -166,10 +262,19 @@
     position: relative;
     z-index: 1;
 
+    @include medium {
+        flex-flow: column wrap;
+    }
+
     &__block {
         position: relative;
         text-align: center;
         width: 48%;
+
+        @include medium {
+            width: 100%;
+            padding-bottom: 20px;
+        }
 
         &--img-bg {
             display: inline-block;
@@ -182,6 +287,10 @@
                 left: -422px;
                 top: -31px;
                 z-index: -1;
+
+                @include medium {
+                    left: -172px;
+                }
             }
 
             &.flowers {
@@ -191,15 +300,29 @@
                 right: -299px;
                 bottom: 60px;
             }
+
+            @include xs-small {
+
+                &.table,
+                &.flowers {
+                    display: none;
+                }
+            }
         }
 
         &-img {
             padding-bottom: 25px;
 
+            @include small {
+                padding-bottom: 7px;
+            }
+
             img {
                 pointer-events: none;
                 position: relative;
                 z-index: -1;
+                max-width: 100%;
+                height: auto;
             }
         }
 
@@ -207,6 +330,11 @@
             @include font(#{16px/30px}, $font-comfortaa-regular);
             padding: 0 16px;
             position: relative;
+
+            @include small {
+                font-size: 14px;
+                line-height: 24px;
+            }
         }
     }
 }
