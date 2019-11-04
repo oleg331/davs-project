@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/jquery-ui.min.css" />
     <link rel="stylesheet" href="css/main.min.css" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,6 +12,103 @@
 
   <body>
     <section id="header">
+        <div id="modal-header-discount" class="modal hidden">
+          <div class="modal__container left-side">
+              <div class="icon-close"></div>
+            <div class="modal__side">
+              <div class="modal__wait">
+                <h5>Подождите!</h5>
+                <p class="modal__wait-preheading">Не уходите с пустыми руками</p>
+                <div class="modal__gift">
+                  <p>Подарок можно будет получить еще:</p>
+                  <div class="modal__wait-time">
+                    1 час 45 мин
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal__content">
+              <h4 class="modal__content-heading">
+                Получите в подарок скидку 10%
+                <i>на офисную мебель</i>
+                <span>по индивидуальному заказу</span>
+              </h4>
+              <p class="modal__content-preheading">Мы закрепим скидку за Вами по номеру телефона. Вы сможете воспользоваться ей в течении 35 дней.</p>
+              <form action="#" class="catalog__form">
+                <div class="catalog__form_group">
+                    <label for="" class="catalog__form_group">
+                      <input
+                        class="input-general"
+                        type="text"
+                        placeholder="Введите номер телефона"
+                      />
+                    </label>
+                    <label for="" class="catalog__form_group">
+                      <button class="btn-general btn-yellow">
+                        <div class="btn-content">
+                          Закрепить скидку в 10%
+                        </div>
+                      </button>
+                    </label>
+                </div>
+                <label class="form-checkbox catalog__form_group">
+                  <label class="checkbox__container">
+                      <input type="checkbox" />
+                      <div class="checkbox__checkmark"></div>
+                  </label>
+                  <p>
+                    <span>Вы соглашаетесь с условиями</span>
+                    <a href="#!">обработки персональных данных</a>
+                  </p>
+                </label>
+              </form>
+            
+            </div>
+          </div>
+        </div>
+        <div id="modal-header-calculate" class="modal hidden">
+          <div class="modal__container right-side">
+              <div class="icon-close"></div>
+                <div class="modal__side">
+                </div>
+                <div class="modal__content">
+                  <h4 class="modal__content-heading">
+                    Рассчитать стоимость мебели
+                  </h4>
+                  <p class="modal__content-preheading">Наш менеджер свяжется с вами в ближайшее время, чтобы уточнить Ваши потребности и составить индивидуальный расчет стоимости*.</p>
+                  <p class="modal__content-prepreheading">*Вы получите расчет с точностью до 90% в 3-ех ценовых вариантах. Более точную сумму мы сможем назвать только после замеров</p>
+                  <form action="#" class="catalog__form">
+                    <div class="catalog__form_group">
+                        <label for="" class="catalog__form_group">
+                          <input
+                            class="input-general"
+                            type="text"
+                            placeholder="Введите номер телефона"
+                          />
+                        </label>
+                        <label for="" class="catalog__form_group">
+                          <button class="btn-general btn-yellow">
+                            <div class="btn-content">
+                              Закрепить скидку в 10%
+                            </div>
+                          </button>
+                        </label>
+                    </div>
+                    <label class="form-checkbox catalog__form_group">
+                      <label class="checkbox__container">
+                          <input type="checkbox" />
+                          <div class="checkbox__checkmark"></div>
+                      </label>
+                      <p>
+                        <span>Вы соглашаетесь с условиями</span>
+                        <a href="#!">обработки персональных данных</a>
+                      </p>
+                    </label>
+                  </form>
+                
+                </div>
+              </div>
+        </div>
       <div class="wrapper header-wrapper">
         <div class="header-top">
           <a href="#!" id="logo">Davs</a>
@@ -58,6 +156,49 @@
     </section>
 
     <section id="furniture">
+        <div id="modal-furniture-calculate" class="modal hidden">
+          <div class="modal__container right-side">
+              <div class="icon-close"></div>
+                <div class="modal__side">
+                </div>
+                <div class="modal__content">
+                  <h4 class="modal__content-heading">
+                    Рассчитать стоимость мебели
+                  </h4>
+                  <p class="modal__content-preheading">Наш менеджер свяжется с вами в ближайшее время, чтобы уточнить Ваши потребности и составить индивидуальный расчет стоимости*.</p>
+                  <p class="modal__content-prepreheading">*Вы получите расчет с точностью до 90% в 3-ех ценовых вариантах. Более точную сумму мы сможем назвать только после замеров</p>
+                  <form action="#" class="catalog__form">
+                    <div class="catalog__form_group">
+                        <label for="" class="catalog__form_group">
+                          <input
+                            class="input-general"
+                            type="text"
+                            placeholder="Введите номер телефона"
+                          />
+                        </label>
+                        <label for="" class="catalog__form_group">
+                          <button class="btn-general btn-yellow">
+                            <div class="btn-content">
+                              Закрепить скидку в 10%
+                            </div>
+                          </button>
+                        </label>
+                    </div>
+                    <label class="form-checkbox catalog__form_group">
+                      <label class="checkbox__container">
+                          <input type="checkbox" />
+                          <div class="checkbox__checkmark"></div>
+                      </label>
+                      <p>
+                        <span>Вы соглашаетесь с условиями</span>
+                        <a href="#!">обработки персональных данных</a>
+                      </p>
+                    </label>
+                  </form>
+                
+                </div>
+              </div>
+        </div>
       <div class="wrapper">
         <h2 class="furniture-heading">
           <span>Произведем и установим</span>
@@ -571,6 +712,49 @@
     </section>
 
     <section id="consultation">
+        <div id="modal-consultation-calculate" class="modal hidden">
+          <div class="modal__container right-side">
+              <div class="icon-close"></div>
+                <div class="modal__side">
+                </div>
+                <div class="modal__content">
+                  <h4 class="modal__content-heading">
+                    Рассчитать стоимость мебели
+                  </h4>
+                  <p class="modal__content-preheading">Наш менеджер свяжется с вами в ближайшее время, чтобы уточнить Ваши потребности и составить индивидуальный расчет стоимости*.</p>
+                  <p class="modal__content-prepreheading">*Вы получите расчет с точностью до 90% в 3-ех ценовых вариантах. Более точную сумму мы сможем назвать только после замеров</p>
+                  <form action="#" class="catalog__form">
+                    <div class="catalog__form_group">
+                        <label for="" class="catalog__form_group">
+                          <input
+                            class="input-general"
+                            type="text"
+                            placeholder="Введите номер телефона"
+                          />
+                        </label>
+                        <label for="" class="catalog__form_group">
+                          <button class="btn-general btn-yellow">
+                            <div class="btn-content">
+                              Закрепить скидку в 10%
+                            </div>
+                          </button>
+                        </label>
+                    </div>
+                    <label class="form-checkbox catalog__form_group">
+                      <label class="checkbox__container">
+                          <input type="checkbox" />
+                          <div class="checkbox__checkmark"></div>
+                      </label>
+                      <p>
+                        <span>Вы соглашаетесь с условиями</span>
+                        <a href="#!">обработки персональных данных</a>
+                      </p>
+                    </label>
+                  </form>
+                
+                </div>
+              </div>
+        </div>
       <div class="document"></div>
       <div
         class="stapler"
@@ -975,6 +1159,49 @@
     </section>
 
     <div id="quality">
+        <div id="modal-quality-calculate" class="modal hidden">
+          <div class="modal__container right-side">
+              <div class="icon-close"></div>
+                <div class="modal__side">
+                </div>
+                <div class="modal__content">
+                  <h4 class="modal__content-heading">
+                    Рассчитать стоимость мебели
+                  </h4>
+                  <p class="modal__content-preheading">Наш менеджер свяжется с вами в ближайшее время, чтобы уточнить Ваши потребности и составить индивидуальный расчет стоимости*.</p>
+                  <p class="modal__content-prepreheading">*Вы получите расчет с точностью до 90% в 3-ех ценовых вариантах. Более точную сумму мы сможем назвать только после замеров</p>
+                  <form action="#" class="catalog__form">
+                    <div class="catalog__form_group">
+                        <label for="" class="catalog__form_group">
+                          <input
+                            class="input-general"
+                            type="text"
+                            placeholder="Введите номер телефона"
+                          />
+                        </label>
+                        <label for="" class="catalog__form_group">
+                          <button class="btn-general btn-yellow">
+                            <div class="btn-content">
+                              Закрепить скидку в 10%
+                            </div>
+                          </button>
+                        </label>
+                    </div>
+                    <label class="form-checkbox catalog__form_group">
+                      <label class="checkbox__container">
+                          <input type="checkbox" />
+                          <div class="checkbox__checkmark"></div>
+                      </label>
+                      <p>
+                        <span>Вы соглашаетесь с условиями</span>
+                        <a href="#!">обработки персональных данных</a>
+                      </p>
+                    </label>
+                  </form>
+                
+                </div>
+              </div>
+        </div>
       <div class="wrapper">
         <div class="quality-head"></div>
         <h2 class="quality-heading">
@@ -1022,6 +1249,60 @@
     </div>
 
     <div id="solution">
+        <div id="modal-solution-discount" class="modal hidden">
+          <div class="modal__container left-side">
+              <div class="icon-close"></div>
+            <div class="modal__side">
+              <div class="modal__wait">
+                <h5>Подождите!</h5>
+                <p class="modal__wait-preheading">Не уходите с пустыми руками</p>
+                <div class="modal__gift">
+                  <p>Подарок можно будет получить еще:</p>
+                  <div class="modal__wait-time">
+                    1 час 45 мин
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal__content">
+              <h4 class="modal__content-heading">
+                Получите в подарок скидку 10%
+                <i>на офисную мебель</i>
+                <span>по индивидуальному заказу</span>
+              </h4>
+              <p class="modal__content-preheading">Мы закрепим скидку за Вами по номеру телефона. Вы сможете воспользоваться ей в течении 35 дней.</p>
+              <form action="#" class="catalog__form">
+                <div class="catalog__form_group">
+                    <label for="" class="catalog__form_group">
+                      <input
+                        class="input-general"
+                        type="text"
+                        placeholder="Введите номер телефона"
+                      />
+                    </label>
+                    <label for="" class="catalog__form_group">
+                      <button class="btn-general btn-yellow">
+                        <div class="btn-content">
+                          Закрепить скидку в 10%
+                        </div>
+                      </button>
+                    </label>
+                </div>
+                <label class="form-checkbox catalog__form_group">
+                  <label class="checkbox__container">
+                      <input type="checkbox" />
+                      <div class="checkbox__checkmark"></div>
+                  </label>
+                  <p>
+                    <span>Вы соглашаетесь с условиями</span>
+                    <a href="#!">обработки персональных данных</a>
+                  </p>
+                </label>
+              </form>
+            
+            </div>
+          </div>
+        </div>
       <div class="clip"></div>
       <div class="solution__container">
         <div class="wrapper">
@@ -1482,54 +1763,416 @@
           <div id="equipment-quiz__count" class="equipment-quiz__count">
             Осталось <i>7</i> вопросов из 7
           </div>
-          <div id="equipment-quiz" class="equipment-quiz__container">
-            <div class="equipment-quiz__steps">
-              <div class="equipment-quiz__step completed"></div>
-              <div class="equipment-quiz__step"></div>
-              <div class="equipment-quiz__step"></div>
-              <div class="equipment-quiz__step"></div>
-              <div class="equipment-quiz__step"></div>
-              <div class="equipment-quiz__step"></div>
-              <div class="equipment-quiz__step"></div>
-            </div>
+          <div class="equipment-quiz__steps">
+            <div class="equipment-quiz__step completed"></div>
+            <div class="equipment-quiz__step"></div>
+            <div class="equipment-quiz__step"></div>
+            <div class="equipment-quiz__step"></div>
+            <div class="equipment-quiz__step"></div>
+            <div class="equipment-quiz__step"></div>
+            <div class="equipment-quiz__step"></div>
+          </div>
+          <div id="equipment-quiz" class="equipment-quiz__container step-1 active-slide">
             <div class="equipment-quiz__content">
-              <div class="equipment-quiz__content-inner">
+              <div class="equipment-quiz__content-inner active-slide">
                 <p class="equipment-quiz__content-heading">
                   Сколько сотрудников работает в офисе?
                 </p>
                 <div class="equipment-quiz__content-options">
                   <label class="equipment-quiz__content-option checked">
-                    до 5 человек
+                    <input type="radio" name="step1">
+                    <div class="checkbox__checkmark"></div>
+                    <span>до 5 человек</span>
                   </label>
                   <label class="equipment-quiz__content-option">
-                    10 - 20 человек
+                      <input type="radio" name="step1">
+                      <div class="checkbox__checkmark"></div>
+                      <span>10 - 20 человек</span>
+                    
                   </label>
                   <label class="equipment-quiz__content-option">
-                    30 - 50 человек
+                    <input type="radio" name="step1">
+                    <div class="checkbox__checkmark"></div>
+                    <span>30 - 50 человек</span>
+                    
                   </label>
                   <label class="equipment-quiz__content-option">
-                    5 - 10 человек
+                      <input type="radio" name="step1">
+                      <div class="checkbox__checkmark"></div>
+                      <span>5 - 10 человек</span>
+                    
                   </label>
                   <label class="equipment-quiz__content-option">
-                    20 - 30 человек
+                      <input type="radio" name="step1">
+                      <div class="checkbox__checkmark"></div>
+                      <span>20 - 30 человек</span>
+                    
                   </label>
                   <label class="equipment-quiz__content-option">
-                    от 50 человек
+                      <input type="radio" name="step1">
+                      <div class="checkbox__checkmark"></div>
+                      <span>от 50 человек</span>
+                    
                   </label>
                 </div>
               </div>
             </div>
+            <div class="equipment__btn">
+              <button
+                data-to="2"
+                id="equipment__btn"
+                class="btn-general btn-yellow"
+              >
+                <div class="btn-content">
+                  Следующий вопрос <i class="icon-next"></i>
+                </div>
+              </button>
+            </div>
           </div>
-          <div class="equipment__btn">
-            <button
-              id="equipment__btn"
-              class="btn-general btn-yellow btn-disabled"
-            >
-              <div class="btn-content">
-                Следующий вопрос <i class="icon-next"></i>
+          <div id="equipment-quiz" class="equipment-quiz__container step-2">
+            <div class="equipment-quiz__content">
+              <div class="equipment-quiz__content-inner">
+                <p class="equipment-quiz__content-heading">
+                  В каком пространстве ваши сотрудники будут работать?
+                </p>
+                <div class="equipment-quiz__content-options">
+                  <label class="equipment-quiz__content-option checked">
+                    <input type="radio" name="step1">
+                    <img src="images/quiz/img1-step2.jpg" alt="">
+                    <div class="checkbox__checkmark"></div>
+                    <span>Отдельные кабинеты</span>
+                  </label>
+                  <label class="equipment-quiz__content-option">
+                      <input type="radio" name="step1">
+                      <img src="images/quiz/img2-step2.jpg" alt="">
+                      <div class="checkbox__checkmark"></div>
+                      <span>Open Space</span>
+                    
+                  </label>
+                </div>
               </div>
-            </button>
+            </div>
+            <div class="equipment__btn">
+              <button
+                data-to="3"
+                id="equipment__btn"
+                class="btn-general btn-yellow"
+              >
+                <div class="btn-content">
+                  Следующий вопрос <i class="icon-next"></i>
+                </div>
+              </button>
+            </div>
           </div>
+          <div id="equipment-quiz" class="equipment-quiz__container step-3">
+              <div class="equipment-quiz__content">
+                <div class="equipment-quiz__content-inner">
+                    <p class="equipment-quiz__content-heading">
+                        Укажите количество рабочих кабинетов <i id="amount2"></i>
+                    </p>
+                    <div class="quiz-range">
+                        
+                        <div class="slider-range" id="slider-range"></div>
+                    </div>
+                  <p class="equipment-quiz__content-heading">
+                      Укажите общую площадь кабинетов в кв. метрах
+                  </p>
+                  <div class="equipment-quiz__content-options">
+                    <label class="equipment-quiz__content-option checked">
+                      <input type="radio" name="step1">
+                      <div class="checkbox__checkmark"></div>
+                      <span>до 100 м<sup>2</sup></span>
+                    </label>
+                    <label class="equipment-quiz__content-option">
+                        <input type="radio" name="step1">
+                        <div class="checkbox__checkmark"></div>
+                        <span>100 - 300 м<sup>2</sup></span>
+                    </label>
+                    <label class="equipment-quiz__content-option">
+                        <input type="radio" name="step1">
+                        <div class="checkbox__checkmark"></div>
+                        <span>300 - 500 м<sup>2</sup></span>
+                    </label>
+                    <label class="equipment-quiz__content-option">
+                        <input type="radio" name="step1">
+                        <div class="checkbox__checkmark"></div>
+                        <span>не знаю, нужен замер</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="equipment__btn">
+                <button
+                  data-to="4"
+                  id="equipment__btn"
+                  class="btn-general btn-yellow"
+                >
+                  <div class="btn-content">
+                    Следующий вопрос <i class="icon-next"></i>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div id="equipment-quiz" class="equipment-quiz__container step-4">
+                <div class="equipment-quiz__content">
+                  <div class="equipment-quiz__content-inner">
+                      <p class="equipment-quiz__content-heading">
+                          Укажите площадь Open Space <i id="amount3"></i>
+                      </p>
+                      <div class="quiz-range">
+                          
+                          <div class="slider-range" id="slider-range2"></div>
+                      </div>
+                  </div>
+                </div>
+                <div class="equipment__btn">
+                  <button
+                    data-to="5"
+                    id="equipment__btn"
+                    class="btn-general btn-yellow"
+                  >
+                    <div class="btn-content">
+                      Следующий вопрос <i class="icon-next"></i>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div id="equipment-quiz" class="equipment-quiz__container step-5">
+                  <div class="equipment-quiz__content">
+                    <div class="equipment-quiz__content-inner">
+                      <p class="equipment-quiz__content-heading">
+                        Ваши сотрудники принимают клиентов в офисе?
+                      </p>
+                      <div class="equipment-quiz__content-options">
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="radio" name="step5">
+                          <img src="images/quiz/img1-step5.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Да, интерьер в офисе должен помогать в продажах</span>
+                        </label>
+                        <label class="equipment-quiz__content-option">
+                            <input type="radio" name="step5">
+                            <img src="images/quiz/img2-step5.jpg" alt="">
+                            <div class="checkbox__checkmark"></div>
+                            <span>Нет, самое важное — чтобы сотрудникам было комфортно работать</span>
+                          
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="equipment__btn">
+                    <button
+                      data-to="6"
+                      id="equipment__btn"
+                      class="btn-general btn-yellow"
+                    >
+                      <div class="btn-content">
+                        Следующий вопрос <i class="icon-next"></i>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              <div id="equipment-quiz" class="equipment-quiz__container step-6">
+                  <div class="equipment-quiz__content">
+                    <div class="equipment-quiz__content-inner">
+                      <p class="equipment-quiz__content-heading">
+                        Какие еще помещеения нужно укомплектовать?
+                        <span>Выберите один или несколько вариантов</span>
+                      </p>
+                      <div class="equipment-quiz__content-options">
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="checkbox" name="step6">
+                          <img src="images/quiz/img1-step6.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Кабинет руководителя</span>
+                        </label>
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="checkbox" name="step6">
+                          <img src="images/quiz/img2-step6.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Кухня</span>
+                        </label>
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="checkbox" name="step6">
+                          <img src="images/quiz/img3-step6.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Зона отдыха</span>
+                        </label>
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="checkbox" name="step6">
+                          <img src="images/quiz/img4-step6.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Ресепшн</span>
+                        </label>
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="checkbox" name="step6">
+                          <img src="images/quiz/img5-step6.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Зал для переговоров</span>
+                        </label>
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="checkbox" name="step6">
+                          <img src="images/quiz/img6-step6.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Комната для обучения и тренингов</span>
+                        </label>
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="checkbox" name="step6">
+                          <img src="images/quiz/img7-step6.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Гардеробная комната</span>
+                        </label>
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="checkbox" name="step6">
+                          <img src="images/quiz/img8-step6.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Санузлы</span>
+                        </label>
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="checkbox" name="step6">
+                          <img src="images/quiz/img9-step6.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Подсобные помещения</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="equipment__btn">
+                    <button
+                      data-to="7"
+                      id="equipment__btn"
+                      class="btn-general btn-yellow"
+                    >
+                      <div class="btn-content">
+                        Следующий вопрос <i class="icon-next"></i>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              <div id="equipment-quiz" class="equipment-quiz__container step-7">
+                  <div class="equipment-quiz__content">
+                    <div class="equipment-quiz__content-inner">
+                      <p class="equipment-quiz__content-heading">
+                        Какие еще помещеения нужно укомплектовать?
+                        <span>Выберите один или несколько вариантов</span>
+                      </p>
+                      <div class="equipment-quiz__content-options">
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="checkbox" name="step7">
+                          <img src="images/quiz/img1-step7.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Только мебель</span>
+                        </label>
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="checkbox" name="step7">
+                          <img src="images/quiz/img2-step7.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Продумать зонирование</span>
+                        </label>
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="checkbox" name="step7">
+                          <img src="images/quiz/img3-step7.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Подобрать и установить освещение</span>
+                        </label>
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="checkbox" name="step7">
+                          <img src="images/quiz/img4-step7.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Проектирование и производство стеклянных перегородок</span>
+                        </label>
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="checkbox" name="step7">
+                          <img src="images/quiz/img5-step7.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Проектирование и производство сантехнических перегородок</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="equipment__btn">
+                    <button
+                      data-to="8"
+                      id="equipment__btn"
+                      class="btn-general btn-yellow"
+                    >
+                      <div class="btn-content">
+                        Следующий вопрос <i class="icon-next"></i>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+                <div id="equipment-quiz" class="equipment-quiz__container step-8">
+                    <div class="equipment-quiz__content">
+                      <div class="equipment-quiz__content-inner">
+                        <p class="equipment-quiz__content-heading">
+                            <span>Все готово. Остался последний шаг</span>
+                            Получите индивидуальный расчет стоимости в трех ценовых вариантах*
+                        </p>
+                        <p class="equipment-quiz__content-preheading">Мы обработаем данные вашей анкеты, зададим несколько уточняющих вопросов и вышлем индивидуальный расчет стоимости</p>
+                        <form action="#" class="catalog__form">
+                            <div class="catalog__form_group-container">
+                                <label for="" class="catalog__form_group">
+                                  <input class="input-general" type="text" placeholder="Введите номер телефона">
+                                </label>
+                                <label for="" class="catalog__form_group">
+                                  <button class="btn-general btn-yellow">
+                                    <div class="btn-content">
+                                      Получить каталог
+                                    </div>
+                                  </button>
+                                </label>
+                            </div>
+                            <label class="catalog__form_group">
+                              <label class="checkbox__container">
+                                  <input type="checkbox" checked>
+                                  <div class="checkbox__checkmark"></div>
+                              </label>
+                              <p>
+                                <span>Вы соглашаетесь с условиями</span>
+                                <a href="#!">обработки персональных данных</a>
+                              </p>
+                            </label>
+                            <h5>Как Вам удобно получить индивидуальный расчет стоимости?</h5>
+                            <ul class="catalog__form-socials">
+                              <li class="icon-viber">
+                                <a href="#!">
+                                  <span class="catalog__form-socials_icon-container">
+                                    <i class="icons-social"></i>
+                                  </span>
+                                  Viber
+                                </a>
+                              </li>
+                              <li class="icon-telegram">
+                                <a href="#!">
+                                  <span class="catalog__form-socials_icon-container">
+                                    <i class="icons-social"></i>
+                                  </span>
+                                  Telegram
+                                </a>
+                              </li>
+                              <li class="icon-whatsapp">
+                                <a href="#!">
+                                  <span class="catalog__form-socials_icon-container">
+                                    <i class="icons-social"></i>
+                                  </span>
+                                  WhatsApp
+                                </a>
+                              </li>
+                              <li class="icon-email">
+                                <a href="#!">
+                                  <span class="catalog__form-socials_icon-container">
+                                    <i class="icons-social"></i>
+                                  </span>
+                                  E-mail
+                                </a>
+                              </li>
+                            </ul>
+                            <div class="quiz-last-step-review">**Вы получите расчет с точностью до 80%. Точную стоимость вы сможете узнать после того, как мы сделаем замеры, подробно обсудим ваши задачи и подготовим проект.</div>
+                          </form>
+                      </div>
+                    </div>
+                  </div>
         </div>
       </div>
       <div class="equipment-scroll-text"></div>

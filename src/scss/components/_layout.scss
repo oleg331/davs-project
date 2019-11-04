@@ -6,6 +6,10 @@
    @include font(16px, $font-comfortaa-regular);
    color: #212121;
    min-width: 330px;
+
+   &.hidden {
+     overflow: hidden;
+   }
  }
 
   .wrapper {
