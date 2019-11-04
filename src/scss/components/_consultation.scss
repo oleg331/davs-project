@@ -21,7 +21,7 @@
         background: url(../images/object/img-stapler.png) 0 0 no-repeat;
         position: absolute;
         right: 103px;
-        top: -150px;
+        top: 300px;
     }
 
     .document {
@@ -31,7 +31,7 @@
         background: url(../images/object/img-document.png) 0 0 no-repeat;
         position: absolute;
         right: 0;
-        top: -415px;
+        top: -315px;
     }
 
     @include x-large {
@@ -220,6 +220,8 @@
         @include font(16px, $font-comfortaa-regular);
         color: #5582dc;
         margin-left: 25px;
+        position: relative;
+        z-index: 1;
 
         &:hover {
             text-decoration: none;

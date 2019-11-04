@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/jquery-ui.min.css" />
     <link rel="stylesheet" href="css/main.min.css" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,7 +11,158 @@
   </head>
 
   <body>
+      <div id="modal-leave-discount" class="modal hidden">
+        <div class="modal__container left-side">
+            <div class="icon-close"></div>
+          <div class="modal__side">
+            <div class="modal__wait">
+              <h5>Подождите!</h5>
+              <p class="modal__wait-preheading">Не уходите с пустыми руками</p>
+              <div class="modal__gift">
+                <p>Подарок можно будет получить еще:</p>
+                <div class="modal__wait-time">
+                  1 час 45 мин
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal__content">
+            <h4 class="modal__content-heading">
+              Получите в подарок скидку 10%
+              <i>на офисную мебель</i>
+              <span>по индивидуальному заказу</span>
+            </h4>
+            <p class="modal__content-preheading">Мы закрепим скидку за Вами по номеру телефона. Вы сможете воспользоваться ей в течении 35 дней.</p>
+            <form action="#" class="catalog__form">
+              <div class="catalog__form_group">
+                  <label for="" class="catalog__form_group">
+                    <input
+                      class="input-general"
+                      type="text"
+                      placeholder="Введите номер телефона"
+                    />
+                  </label>
+                  <label for="" class="catalog__form_group">
+                    <button class="btn-general btn-yellow">
+                      <div class="btn-content">
+                        Закрепить скидку в 10%
+                      </div>
+                    </button>
+                  </label>
+              </div>
+              <label class="form-checkbox catalog__form_group">
+                <label class="checkbox__container">
+                    <input type="checkbox" />
+                    <div class="checkbox__checkmark"></div>
+                </label>
+                <p>
+                  <span>Вы соглашаетесь с условиями</span>
+                  <a href="#!">обработки персональных данных</a>
+                </p>
+              </label>
+            </form>
+          
+          </div>
+        </div>
+      </div>
     <section id="header">
+        <div id="modal-header-discount" class="modal hidden">
+          <div class="modal__container left-side">
+              <div class="icon-close"></div>
+            <div class="modal__side">
+              <div class="modal__wait">
+                <h5>Подождите!</h5>
+                <p class="modal__wait-preheading">Не уходите с пустыми руками</p>
+                <div class="modal__gift">
+                  <p>Подарок можно будет получить еще:</p>
+                  <div class="modal__wait-time">
+                    1 час 45 мин
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal__content">
+              <h4 class="modal__content-heading">
+                Получите в подарок скидку 10%
+                <i>на офисную мебель</i>
+                <span>по индивидуальному заказу</span>
+              </h4>
+              <p class="modal__content-preheading">Мы закрепим скидку за Вами по номеру телефона. Вы сможете воспользоваться ей в течении 35 дней.</p>
+              <form action="#" class="catalog__form">
+                <div class="catalog__form_group">
+                    <label for="" class="catalog__form_group">
+                      <input
+                        class="input-general"
+                        type="text"
+                        placeholder="Введите номер телефона"
+                      />
+                    </label>
+                    <label for="" class="catalog__form_group">
+                      <button class="btn-general btn-yellow">
+                        <div class="btn-content">
+                          Закрепить скидку в 10%
+                        </div>
+                      </button>
+                    </label>
+                </div>
+                <label class="form-checkbox catalog__form_group">
+                  <label class="checkbox__container">
+                      <input type="checkbox" />
+                      <div class="checkbox__checkmark"></div>
+                  </label>
+                  <p>
+                    <span>Вы соглашаетесь с условиями</span>
+                    <a href="#!">обработки персональных данных</a>
+                  </p>
+                </label>
+              </form>
+            
+            </div>
+          </div>
+        </div>
+        <div id="modal-header-calculate" class="modal hidden">
+          <div class="modal__container right-side">
+              <div class="icon-close"></div>
+                <div class="modal__side">
+                </div>
+                <div class="modal__content">
+                  <h4 class="modal__content-heading">
+                    Рассчитать стоимость мебели
+                  </h4>
+                  <p class="modal__content-preheading">Наш менеджер свяжется с вами в ближайшее время, чтобы уточнить Ваши потребности и составить индивидуальный расчет стоимости*.</p>
+                  <p class="modal__content-prepreheading">*Вы получите расчет с точностью до 90% в 3-ех ценовых вариантах. Более точную сумму мы сможем назвать только после замеров</p>
+                  <form action="#" class="catalog__form">
+                    <div class="catalog__form_group">
+                        <label for="" class="catalog__form_group">
+                          <input
+                            class="input-general"
+                            type="text"
+                            placeholder="Введите номер телефона"
+                          />
+                        </label>
+                        <label for="" class="catalog__form_group">
+                          <button class="btn-general btn-yellow">
+                            <div class="btn-content">
+                              Закрепить скидку в 10%
+                            </div>
+                          </button>
+                        </label>
+                    </div>
+                    <label class="form-checkbox catalog__form_group">
+                      <label class="checkbox__container">
+                          <input type="checkbox" />
+                          <div class="checkbox__checkmark"></div>
+                      </label>
+                      <p>
+                        <span>Вы соглашаетесь с условиями</span>
+                        <a href="#!">обработки персональных данных</a>
+                      </p>
+                    </label>
+                  </form>
+                
+                </div>
+              </div>
+        </div>
       <div class="wrapper header-wrapper">
         <div class="header-top">
           <a href="#!" id="logo">Davs</a>
@@ -58,6 +210,49 @@
     </section>
 
     <section id="furniture">
+        <div id="modal-furniture-calculate" class="modal hidden">
+          <div class="modal__container right-side">
+              <div class="icon-close"></div>
+                <div class="modal__side">
+                </div>
+                <div class="modal__content">
+                  <h4 class="modal__content-heading">
+                    Рассчитать стоимость мебели
+                  </h4>
+                  <p class="modal__content-preheading">Наш менеджер свяжется с вами в ближайшее время, чтобы уточнить Ваши потребности и составить индивидуальный расчет стоимости*.</p>
+                  <p class="modal__content-prepreheading">*Вы получите расчет с точностью до 90% в 3-ех ценовых вариантах. Более точную сумму мы сможем назвать только после замеров</p>
+                  <form action="#" class="catalog__form">
+                    <div class="catalog__form_group">
+                        <label for="" class="catalog__form_group">
+                          <input
+                            class="input-general"
+                            type="text"
+                            placeholder="Введите номер телефона"
+                          />
+                        </label>
+                        <label for="" class="catalog__form_group">
+                          <button class="btn-general btn-yellow">
+                            <div class="btn-content">
+                              Закрепить скидку в 10%
+                            </div>
+                          </button>
+                        </label>
+                    </div>
+                    <label class="form-checkbox catalog__form_group">
+                      <label class="checkbox__container">
+                          <input type="checkbox" />
+                          <div class="checkbox__checkmark"></div>
+                      </label>
+                      <p>
+                        <span>Вы соглашаетесь с условиями</span>
+                        <a href="#!">обработки персональных данных</a>
+                      </p>
+                    </label>
+                  </form>
+                
+                </div>
+              </div>
+        </div>
       <div class="wrapper">
         <h2 class="furniture-heading">
           <span>Произведем и установим</span>
@@ -86,7 +281,11 @@
         </ul>
 
         <div class="furniture-types">
-          <div data-aos="fade-down" data-aos-delay="50" class="furniture-types__block">
+          <div
+            data-aos="fade-down"
+            data-aos-delay="50"
+            class="furniture-types__block"
+          >
             <div class="furniture-types__block-heading icons-types">
               <i class="icon-table"></i>
             </div>
@@ -97,7 +296,11 @@
               >
             </div>
           </div>
-          <div data-aos="fade-down" data-aos-delay="100" class="furniture-types__block">
+          <div
+            data-aos="fade-down"
+            data-aos-delay="100"
+            class="furniture-types__block"
+          >
             <div class="furniture-types__block-heading icons-types">
               <i class="icon-chair"></i>
             </div>
@@ -108,7 +311,11 @@
               >
             </div>
           </div>
-          <div data-aos="fade-down" data-aos-delay="150" class="furniture-types__block">
+          <div
+            data-aos="fade-down"
+            data-aos-delay="150"
+            class="furniture-types__block"
+          >
             <div class="furniture-types__block-heading icons-types">
               <i class="icon-pedestal"></i>
             </div>
@@ -119,7 +326,11 @@
               >
             </div>
           </div>
-          <div data-aos="fade-down" data-aos-delay="200" class="furniture-types__block">
+          <div
+            data-aos="fade-down"
+            data-aos-delay="200"
+            class="furniture-types__block"
+          >
             <div class="furniture-types__block-heading icons-types">
               <i class="icon-cupboard"></i>
             </div>
@@ -130,7 +341,11 @@
               >
             </div>
           </div>
-          <div data-aos="fade-down" data-aos-delay="250" class="furniture-types__block">
+          <div
+            data-aos="fade-down"
+            data-aos-delay="250"
+            class="furniture-types__block"
+          >
             <div class="furniture-types__block-heading icons-types">
               <i class="icon-upholstered"></i>
             </div>
@@ -141,7 +356,11 @@
               >
             </div>
           </div>
-          <div data-aos="fade-down" data-aos-delay="300" class="furniture-types__block">
+          <div
+            data-aos="fade-down"
+            data-aos-delay="300"
+            class="furniture-types__block"
+          >
             <div class="furniture-types__block-heading icons-types">
               <i class="icon-respect"></i>
             </div>
@@ -152,7 +371,11 @@
               >
             </div>
           </div>
-          <div data-aos="fade-down" data-aos-delay="350" class="furniture-types__block">
+          <div
+            data-aos="fade-down"
+            data-aos-delay="350"
+            class="furniture-types__block"
+          >
             <div class="furniture-types__block-heading icons-types">
               <i class="icon-lighting"></i>
             </div>
@@ -163,7 +386,11 @@
               >
             </div>
           </div>
-          <div data-aos="fade-down" data-aos-delay="400" class="furniture-types__block">
+          <div
+            data-aos="fade-down"
+            data-aos-delay="400"
+            class="furniture-types__block"
+          >
             <div class="furniture-types__block-heading icons-types">
               <i class="icon-glass-partion"></i>
             </div>
@@ -174,7 +401,11 @@
               >
             </div>
           </div>
-          <div data-aos="fade-down" data-aos-delay="450" class="furniture-types__block">
+          <div
+            data-aos="fade-down"
+            data-aos-delay="450"
+            class="furniture-types__block"
+          >
             <div class="furniture-types__block-heading icons-types">
               <i class="icon-plumbing-partion"></i>
             </div>
@@ -236,22 +467,22 @@
               <div class="object-slider__content">
                 <div class="object-slider__content-slide">
                   <div class="img-container">
-                    <img src="./images/object/slider-img-small.png" alt="" />
+                    <img class="object-gallery1" src="./images/object/slider-img-big.png" alt="" />
                   </div>
                 </div>
                 <div class="object-slider__content-slide">
                   <div class="img-container">
-                    <img src="./images/object/slider-img-small.png" alt="" />
+                    <img class="object-gallery1" src="./images/object/slider-img-big.png" alt="" />
                   </div>
                 </div>
                 <div class="object-slider__content-slide">
                   <div class="img-container">
-                    <img src="./images/object/slider-img-small.png" alt="" />
+                    <img class="object-gallery1" src="./images/object/slider-img-big.png" alt="" />
                   </div>
                 </div>
                 <div class="object-slider__content-slide">
                   <div class="img-container">
-                    <img src="./images/object/slider-img-small.png" alt="" />
+                    <img class="object-gallery1" src="./images/object/slider-img-big.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -313,22 +544,22 @@
               <div class="object-slider__content">
                 <div class="object-slider__content-slide">
                   <div class="img-container">
-                    <img src="./images/object/slider-img-small.png" alt="" />
+                    <img class="object-gallery2" src="./images/object/slider-img-big.png" alt="" />
                   </div>
                 </div>
                 <div class="object-slider__content-slide">
                   <div class="img-container">
-                    <img src="./images/object/slider-img-small.png" alt="" />
+                    <img class="object-gallery2" src="./images/object/slider-img-big.png" alt="" />
                   </div>
                 </div>
                 <div class="object-slider__content-slide">
                   <div class="img-container">
-                    <img src="./images/object/slider-img-small.png" alt="" />
+                    <img class="object-gallery2" src="./images/object/slider-img-big.png" alt="" />
                   </div>
                 </div>
                 <div class="object-slider__content-slide">
                   <div class="img-container">
-                    <img src="./images/object/slider-img-small.png" alt="" />
+                    <img class="object-gallery2" src="./images/object/slider-img-big.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -392,22 +623,22 @@
               <div class="object-slider__content">
                 <div class="object-slider__content-slide">
                   <div class="img-container">
-                    <img src="./images/object/slider-img-small.png" alt="" />
+                    <img class="object-gallery3" src="./images/object/slider-img-big.png" alt="" />
                   </div>
                 </div>
                 <div class="object-slider__content-slide">
                   <div class="img-container">
-                    <img src="./images/object/slider-img-small.png" alt="" />
+                    <img class="object-gallery3" src="./images/object/slider-img-big.png" alt="" />
                   </div>
                 </div>
                 <div class="object-slider__content-slide">
                   <div class="img-container">
-                    <img src="./images/object/slider-img-small.png" alt="" />
+                    <img class="object-gallery3" src="./images/object/slider-img-big.png" alt="" />
                   </div>
                 </div>
                 <div class="object-slider__content-slide">
                   <div class="img-container">
-                    <img src="./images/object/slider-img-small.png" alt="" />
+                    <img class="object-gallery3" src="./images/object/slider-img-big.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -471,22 +702,22 @@
               <div class="object-slider__content">
                 <div class="object-slider__content-slide">
                   <div class="img-container">
-                    <img src="./images/object/slider-img-small.png" alt="" />
+                    <img class="object-gallery4" src="./images/object/slider-img-big.png" alt="" />
                   </div>
                 </div>
                 <div class="object-slider__content-slide">
                   <div class="img-container">
-                    <img src="./images/object/slider-img-small.png" alt="" />
+                    <img class="object-gallery4" src="./images/object/slider-img-big.png" alt="" />
                   </div>
                 </div>
                 <div class="object-slider__content-slide">
                   <div class="img-container">
-                    <img src="./images/object/slider-img-small.png" alt="" />
+                    <img class="object-gallery4" src="./images/object/slider-img-big.png" alt="" />
                   </div>
                 </div>
                 <div class="object-slider__content-slide">
                   <div class="img-container">
-                    <img src="./images/object/slider-img-small.png" alt="" />
+                    <img class="object-gallery4" src="./images/object/slider-img-big.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -535,8 +766,55 @@
     </section>
 
     <section id="consultation">
+        <div id="modal-consultation-calculate" class="modal hidden">
+          <div class="modal__container right-side">
+              <div class="icon-close"></div>
+                <div class="modal__side">
+                </div>
+                <div class="modal__content">
+                  <h4 class="modal__content-heading">
+                    Рассчитать стоимость мебели
+                  </h4>
+                  <p class="modal__content-preheading">Наш менеджер свяжется с вами в ближайшее время, чтобы уточнить Ваши потребности и составить индивидуальный расчет стоимости*.</p>
+                  <p class="modal__content-prepreheading">*Вы получите расчет с точностью до 90% в 3-ех ценовых вариантах. Более точную сумму мы сможем назвать только после замеров</p>
+                  <form action="#" class="catalog__form">
+                    <div class="catalog__form_group">
+                        <label for="" class="catalog__form_group">
+                          <input
+                            class="input-general"
+                            type="text"
+                            placeholder="Введите номер телефона"
+                          />
+                        </label>
+                        <label for="" class="catalog__form_group">
+                          <button class="btn-general btn-yellow">
+                            <div class="btn-content">
+                              Закрепить скидку в 10%
+                            </div>
+                          </button>
+                        </label>
+                    </div>
+                    <label class="form-checkbox catalog__form_group">
+                      <label class="checkbox__container">
+                          <input type="checkbox" />
+                          <div class="checkbox__checkmark"></div>
+                      </label>
+                      <p>
+                        <span>Вы соглашаетесь с условиями</span>
+                        <a href="#!">обработки персональных данных</a>
+                      </p>
+                    </label>
+                  </form>
+                
+                </div>
+              </div>
+        </div>
       <div class="document"></div>
-      <div class="stapler" data-paroller-factor="0.1" data-paroller-type="foreground"></div>
+      <div
+        class="stapler"
+        data-paroller-factor="0.1"
+        data-paroller-type="foreground"
+      ></div>
       <div class="wrapper">
         <div class="consultation-designer"></div>
         <h2 class="consultation-heading">
@@ -574,7 +852,12 @@
               </p>
             </li>
           </ul>
-          <a href="#!" class="consultation-info__more-link">Еще 8 пунктов</a>
+          <a href="#!" class="consultation-info__more-link more-link-modal-enable">
+            <div class="more-link_modal">
+              <p>Сайт рыботекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев текста.</p>
+            </div>
+            <span>Еще 8 пунктов</span>
+          </a>
         </div>
 
         <div class="consultation-btn">
@@ -604,57 +887,57 @@
           <ul class="work-time-tabs-list">
             <li class="work-time-tabs-list__item">
               <a href="#step1">
-                  <div class="step-general">Этап 1</div>
-                  <h6>Консультации и дизайн-проект</h6>
-                  <i class="icons-work-time icon-project"></i>
-                  <div class="work-time-estimate">
-                    <i class="icon-estimate"></i>
-                    5 дней
-                  </div>
+                <div class="step-general">Этап 1</div>
+                <h6>Консультации и дизайн-проект</h6>
+                <i class="icons-work-time icon-project"></i>
+                <div class="work-time-estimate">
+                  <i class="icon-estimate"></i>
+                  5 дней
+                </div>
               </a>
             </li>
             <li class="work-time-tabs-list__item">
               <a href="#step2">
-                  <div class="step-general">Этап 2</div>
-                  <h6>Подписание договора</h6>
-                  <i class="icons-work-time icon-order"></i>
-                  <div class="work-time-estimate">
-                    <i class="icon-estimate"></i>
-                    2-3 дня
-                  </div>
+                <div class="step-general">Этап 2</div>
+                <h6>Подписание договора</h6>
+                <i class="icons-work-time icon-order"></i>
+                <div class="work-time-estimate">
+                  <i class="icon-estimate"></i>
+                  2-3 дня
+                </div>
               </a>
             </li>
             <li class="work-time-tabs-list__item">
               <a href="#step3">
-                  <div class="step-general">Этап 3</div>
-                  <h6>Производство и сборка</h6>
-                  <i class="icons-work-time icon-build"></i>
-                  <div class="work-time-estimate">
-                    <i class="icon-estimate"></i>
-                    5 дней
-                  </div>
+                <div class="step-general">Этап 3</div>
+                <h6>Производство и сборка</h6>
+                <i class="icons-work-time icon-build"></i>
+                <div class="work-time-estimate">
+                  <i class="icon-estimate"></i>
+                  5 дней
+                </div>
               </a>
             </li>
             <li class="work-time-tabs-list__item">
               <a href="#step4">
-                  <div class="step-general">Этап 4</div>
-                  <h6>Доставка и монтаж</h6>
-                  <i class="icons-work-time icon-mounting"></i>
-                  <div class="work-time-estimate">
-                    <i class="icon-estimate"></i>
-                    2-5 дней
-                  </div>
+                <div class="step-general">Этап 4</div>
+                <h6>Доставка и монтаж</h6>
+                <i class="icons-work-time icon-mounting"></i>
+                <div class="work-time-estimate">
+                  <i class="icon-estimate"></i>
+                  2-5 дней
+                </div>
               </a>
             </li>
             <li class="work-time-tabs-list__item">
               <a href="#step5">
-                  <div class="step-general">Этап 5</div>
-                  <h6>Обслуживание</h6>
-                  <i class="icons-work-time icon-service"></i>
-                  <div class="work-time-estimate">
-                    <i class="icon-estimate"></i>
-                    Весь срок службы мебели
-                  </div>
+                <div class="step-general">Этап 5</div>
+                <h6>Обслуживание</h6>
+                <i class="icons-work-time icon-service"></i>
+                <div class="work-time-estimate">
+                  <i class="icon-estimate"></i>
+                  Весь срок службы мебели
+                </div>
               </a>
             </li>
           </ul>
@@ -881,7 +1164,12 @@
               <h4 class="reasons-heading">
                 Система контроля качества по 55 пунктам
               </h4>
-              <a href="#!">Подробнее</a>
+              <a class="more-link-modal-enable" href="#!">
+                <div class="more-link_modal">
+                    <p>Сайт рыботекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев текста.</p>
+                </div>
+                <span>Подробнее</span>
+              </a>
             </div>
           </li>
           <li>
@@ -892,7 +1180,12 @@
               <h4 class="reasons-heading">
                 Квалифицированные мастера, которые проходят отбор
               </h4>
-              <a href="#!">Подробнее</a>
+              <a class="more-link-modal-enable" href="#!">
+                <div class="more-link_modal">
+                    <p>Сайт рыботекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев текста.</p>
+                </div>
+                <span>Подробнее</span>
+              </a>
             </div>
           </li>
           <li class="production-reasons">
@@ -905,7 +1198,11 @@
         </ul>
         <div class="production-points">
           <div class="production-points__block">
-            <div data-aos="fade-right" data-aos-delay="0" class="production-points__block--img-bg table"></div>
+            <div
+              data-aos="fade-right"
+              data-aos-delay="0"
+              class="production-points__block--img-bg table"
+            ></div>
             <div class="production-points__block-img">
               <img src="./images/production/img1-reasons.png" alt="" />
             </div>
@@ -915,7 +1212,11 @@
             </p>
           </div>
           <div class="production-points__block">
-            <div data-aos="fade-left" data-aos-delay="150" class="production-points__block--img-bg flowers"></div>
+            <div
+              data-aos="fade-left"
+              data-aos-delay="150"
+              class="production-points__block--img-bg flowers"
+            ></div>
             <div class="production-points__block-img">
               <img src="./images/production/img2-reasons.png" alt="" />
             </div>
@@ -927,6 +1228,49 @@
     </section>
 
     <div id="quality">
+        <div id="modal-quality-calculate" class="modal hidden">
+          <div class="modal__container right-side">
+              <div class="icon-close"></div>
+                <div class="modal__side">
+                </div>
+                <div class="modal__content">
+                  <h4 class="modal__content-heading">
+                    Рассчитать стоимость мебели
+                  </h4>
+                  <p class="modal__content-preheading">Наш менеджер свяжется с вами в ближайшее время, чтобы уточнить Ваши потребности и составить индивидуальный расчет стоимости*.</p>
+                  <p class="modal__content-prepreheading">*Вы получите расчет с точностью до 90% в 3-ех ценовых вариантах. Более точную сумму мы сможем назвать только после замеров</p>
+                  <form action="#" class="catalog__form">
+                    <div class="catalog__form_group">
+                        <label for="" class="catalog__form_group">
+                          <input
+                            class="input-general"
+                            type="text"
+                            placeholder="Введите номер телефона"
+                          />
+                        </label>
+                        <label for="" class="catalog__form_group">
+                          <button class="btn-general btn-yellow">
+                            <div class="btn-content">
+                              Закрепить скидку в 10%
+                            </div>
+                          </button>
+                        </label>
+                    </div>
+                    <label class="form-checkbox catalog__form_group">
+                      <label class="checkbox__container">
+                          <input type="checkbox" />
+                          <div class="checkbox__checkmark"></div>
+                      </label>
+                      <p>
+                        <span>Вы соглашаетесь с условиями</span>
+                        <a href="#!">обработки персональных данных</a>
+                      </p>
+                    </label>
+                  </form>
+                
+                </div>
+              </div>
+        </div>
       <div class="wrapper">
         <div class="quality-head"></div>
         <h2 class="quality-heading">
@@ -974,153 +1318,327 @@
     </div>
 
     <div id="solution">
+        <div id="modal-solution-discount" class="modal hidden">
+          <div class="modal__container left-side">
+              <div class="icon-close"></div>
+            <div class="modal__content">
+              <h4 class="modal__content-heading">
+                Обычная модалка с текстом
+              </h4>
+              <p>Обычная модалка с текстом</p>
+            </div>
+          </div>
+        </div>
       <div class="clip"></div>
       <div class="solution__container">
-          <div class="wrapper">
-            <div class="solution-head">
-              <h4 class="solution-heading">
-                <span>Почему мебель</span>
-                <strong>по индивидуальному проекту</strong>
-                <strong>может увеличить доход Вашего бизнеса на 10-30%</strong>
-              </h4>
-              <p class="solution-preheading">
-                Делаем не только красивые эскизы, а максимально погружаемся в Вашу
-                задачу, делая работу Вашего бизнеса еще прибыльней
-              </p>
-              <a href="#!" class="reason-solution"
-                >Почему готовое решение в итоге выйдет дороже</a
-              >
-            </div>
+        <div class="wrapper">
+          <div class="solution-head">
+            <h4 class="solution-heading">
+              <span>Почему мебель</span>
+              <strong>по индивидуальному проекту</strong>
+              <strong>может увеличить доход Вашего бизнеса на 10-30%</strong>
+            </h4>
+            <p class="solution-preheading">
+              Делаем не только красивые эскизы, а максимально погружаемся в Вашу
+              задачу, делая работу Вашего бизнеса еще прибыльней
+            </p>
+            <a href="#!" class="reason-solution"
+              >Почему готовое решение в итоге выйдет дороже</a
+            >
+          </div>
+        </div>
+        <div class="slider-solution__wrapper">
             <div class="slider-solution">
+                <div class="slider-solution__arrows">
+                  <div
+                    class="slider-solution__arrow object-slider__arrow arrow-left"
+                  ></div>
+                  <div
+                    class="slider-solution__arrow object-slider__arrow arrow-right"
+                  ></div>
+                </div>
               <div class="slider-solution__flowers"></div>
               <div class="slider-solution__container">
                 <div class="slider-solution__slide">
                   <div class="slider-solution__img-container">
-                    <img src="./images/solution/img-slider.jpg" alt="">
+                    <img src="./images/solution/img-slider.jpg" alt="" />
                   </div>
                   <div class="slider-solution__bullets">
-                    <div style="left: 24%; top: 38%;" class="slider-solution__container-bullet">
-                      <div class="slider-solution__bullet"></div>
+                    <div
+                      style="left: 24%; top: 38%;"
+                      class="slider-solution__container-bullet"
+                    >
+                      <div 
+                        class="slider-solution__bullet"
+                        data-tooltip-text="Столы и стулья с регулируемой высотой позволяют “подстроить” рабочее место под каждого человека индивидуально"
+                        data-tooltip-pretext="Это увеличивает продуктивность человека на 30% и за 6 часов работы он будет делать результат как при 9 часах"
+                      ></div>
+                    </div>
+                    <div
+                      style="left: 58%; top: 61%;"
+                      class="slider-solution__container-bullet"
+                    >
+                    <div 
+                      class="slider-solution__bullet"
+                      data-tooltip-text="Столы и стулья с регулируемой высотой позволяют “подстроить” рабочее место под каждого человека индивидуально"
+                      data-tooltip-pretext="Это увеличивает продуктивность человека на 30% и за 6 часов работы он будет делать результат как при 9 часах"
+                    ></div>
                       <div class="slider-solution__bullet-modal">
-                        <p class="slider-solution__bullet-modal-description">Столы и стулья с регулируемой высотой позволяют “подстроить” рабочее место под каждого человека индивидуально</p>
-                        <p class="slider-solution__bullet-modal-tip">Это увеличивает продуктивность человека на 30% и за 6 часов работы он будет делать результат как при 9 часах</p>
+                        <p class="slider-solution__bullet-modal-description">
+                          Столы и стулья с регулируемой высотой позволяют
+                          “подстроить” рабочее место под каждого человека
+                          индивидуально
+                        </p>
+                        <p class="slider-solution__bullet-modal-tip">
+                          Это увеличивает продуктивность человека на 30% и за 6
+                          часов работы он будет делать результат как при 9 часах
+                        </p>
                       </div>
                     </div>
-                    <div style="left: 58%; top: 61%;" class="slider-solution__container-bullet">
-                      <div class="slider-solution__bullet"></div>
+                    <div
+                      style="left: 70%; top: 18%;"
+                      class="slider-solution__container-bullet"
+                    >
+                    <div 
+                      class="slider-solution__bullet"
+                      data-tooltip-text="Столы и стулья с регулируемой высотой позволяют “подстроить” рабочее место под каждого человека индивидуально"
+                      data-tooltip-pretext="Это увеличивает продуктивность человека на 30% и за 6 часов работы он будет делать результат как при 9 часах"
+                    ></div>
                       <div class="slider-solution__bullet-modal">
-                        <p class="slider-solution__bullet-modal-description">Столы и стулья с регулируемой высотой позволяют “подстроить” рабочее место под каждого человека индивидуально</p>
-                        <p class="slider-solution__bullet-modal-tip">Это увеличивает продуктивность человека на 30% и за 6 часов работы он будет делать результат как при 9 часах</p>
+                        <p class="slider-solution__bullet-modal-description">
+                          Столы и стулья с регулируемой высотой позволяют
+                          “подстроить” рабочее место под каждого человека
+                          индивидуально
+                        </p>
+                        <p class="slider-solution__bullet-modal-tip">
+                          Это увеличивает продуктивность человека на 30% и за 6
+                          часов работы он будет делать результат как при 9 часах
+                        </p>
                       </div>
                     </div>
-                    <div style="left: 70%; top: 18%;" class="slider-solution__container-bullet">
-                      <div class="slider-solution__bullet"></div>
+                    <div
+                      style="left: 78%; top: 59%;"
+                      class="slider-solution__container-bullet"
+                    >
+                    <div 
+                      class="slider-solution__bullet"
+                      data-tooltip-text="Столы и стулья с регулируемой высотой позволяют “подстроить” рабочее место под каждого человека индивидуально"
+                      data-tooltip-pretext="Это увеличивает продуктивность человека на 30% и за 6 часов работы он будет делать результат как при 9 часах"
+                    ></div>
                       <div class="slider-solution__bullet-modal">
-                        <p class="slider-solution__bullet-modal-description">Столы и стулья с регулируемой высотой позволяют “подстроить” рабочее место под каждого человека индивидуально</p>
-                        <p class="slider-solution__bullet-modal-tip">Это увеличивает продуктивность человека на 30% и за 6 часов работы он будет делать результат как при 9 часах</p>
-                      </div>
-                    </div>
-                    <div style="left: 78%; top: 59%;" class="slider-solution__container-bullet">
-                      <div class="slider-solution__bullet"></div>
-                      <div class="slider-solution__bullet-modal">
-                        <p class="slider-solution__bullet-modal-description">Столы и стулья с регулируемой высотой позволяют “подстроить” рабочее место под каждого человека индивидуально</p>
-                        <p class="slider-solution__bullet-modal-tip">Это увеличивает продуктивность человека на 30% и за 6 часов работы он будет делать результат как при 9 часах</p>
+                        <p class="slider-solution__bullet-modal-description">
+                          Столы и стулья с регулируемой высотой позволяют
+                          “подстроить” рабочее место под каждого человека
+                          индивидуально
+                        </p>
+                        <p class="slider-solution__bullet-modal-tip">
+                          Это увеличивает продуктивность человека на 30% и за 6
+                          часов работы он будет делать результат как при 9 часах
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="slider-solution__slide">
                   <div class="slider-solution__img-container">
-                    <img src="./images/solution/img-slider.jpg" alt="">
+                    <img src="./images/solution/img-slider.jpg" alt="" />
                   </div>
                   <div class="slider-solution__bullets">
-                    <div style="left: 24%; top: 38%;" class="slider-solution__container-bullet">
-                      <div class="slider-solution__bullet"></div>
+                    <div
+                      style="left: 24%; top: 38%;"
+                      class="slider-solution__container-bullet"
+                    >
+                    <div 
+                      class="slider-solution__bullet"
+                      data-tooltip-text="Столы и стулья с регулируемой высотой позволяют “подстроить” рабочее место под каждого человека индивидуально"
+                      data-tooltip-pretext="Это увеличивает продуктивность человека на 30% и за 6 часов работы он будет делать результат как при 9 часах"
+                    ></div>
                       <div class="slider-solution__bullet-modal">
-                        <p class="slider-solution__bullet-modal-description">Столы и стулья с регулируемой высотой позволяют “подстроить” рабочее место под каждого человека индивидуально</p>
-                        <p class="slider-solution__bullet-modal-tip">Это увеличивает продуктивность человека на 30% и за 6 часов работы он будет делать результат как при 9 часах</p>
+                        <p class="slider-solution__bullet-modal-description">
+                          Столы и стулья с регулируемой высотой позволяют
+                          “подстроить” рабочее место под каждого человека
+                          индивидуально
+                        </p>
+                        <p class="slider-solution__bullet-modal-tip">
+                          Это увеличивает продуктивность человека на 30% и за 6
+                          часов работы он будет делать результат как при 9 часах
+                        </p>
                       </div>
                     </div>
-                    <div style="left: 58%; top: 61%;" class="slider-solution__container-bullet">
-                      <div class="slider-solution__bullet"></div>
+                    <div
+                      style="left: 58%; top: 61%;"
+                      class="slider-solution__container-bullet"
+                    >
+                    <div 
+                      class="slider-solution__bullet"
+                      data-tooltip-text="Столы и стулья с регулируемой высотой позволяют “подстроить” рабочее место под каждого человека индивидуально"
+                      data-tooltip-pretext="Это увеличивает продуктивность человека на 30% и за 6 часов работы он будет делать результат как при 9 часах"
+                    ></div>
                       <div class="slider-solution__bullet-modal">
-                        <p class="slider-solution__bullet-modal-description">Столы и стулья с регулируемой высотой позволяют “подстроить” рабочее место под каждого человека индивидуально</p>
-                        <p class="slider-solution__bullet-modal-tip">Это увеличивает продуктивность человека на 30% и за 6 часов работы он будет делать результат как при 9 часах</p>
+                        <p class="slider-solution__bullet-modal-description">
+                          Столы и стулья с регулируемой высотой позволяют
+                          “подстроить” рабочее место под каждого человека
+                          индивидуально
+                        </p>
+                        <p class="slider-solution__bullet-modal-tip">
+                          Это увеличивает продуктивность человека на 30% и за 6
+                          часов работы он будет делать результат как при 9 часах
+                        </p>
                       </div>
                     </div>
-                    <div style="left: 70%; top: 18%;" class="slider-solution__container-bullet">
-                      <div class="slider-solution__bullet"></div>
+                    <div
+                      style="left: 70%; top: 18%;"
+                      class="slider-solution__container-bullet"
+                    >
+                    <div 
+                      class="slider-solution__bullet"
+                      data-tooltip-text="Столы и стулья с регулируемой высотой позволяют “подстроить” рабочее место под каждого человека индивидуально"
+                      data-tooltip-pretext="Это увеличивает продуктивность человека на 30% и за 6 часов работы он будет делать результат как при 9 часах"
+                    ></div>
                       <div class="slider-solution__bullet-modal">
-                        <p class="slider-solution__bullet-modal-description">Столы и стулья с регулируемой высотой позволяют “подстроить” рабочее место под каждого человека индивидуально</p>
-                        <p class="slider-solution__bullet-modal-tip">Это увеличивает продуктивность человека на 30% и за 6 часов работы он будет делать результат как при 9 часах</p>
+                        <p class="slider-solution__bullet-modal-description">
+                          Столы и стулья с регулируемой высотой позволяют
+                          “подстроить” рабочее место под каждого человека
+                          индивидуально
+                        </p>
+                        <p class="slider-solution__bullet-modal-tip">
+                          Это увеличивает продуктивность человека на 30% и за 6
+                          часов работы он будет делать результат как при 9 часах
+                        </p>
                       </div>
                     </div>
-                    <div style="left: 78%; top: 59%;" class="slider-solution__container-bullet">
-                      <div class="slider-solution__bullet"></div>
+                    <div
+                      style="left: 78%; top: 59%;"
+                      class="slider-solution__container-bullet"
+                    >
+                    <div 
+                      class="slider-solution__bullet"
+                      data-tooltip-text="Столы и стулья с регулируемой высотой позволяют “подстроить” рабочее место под каждого человека индивидуально"
+                      data-tooltip-pretext="Это увеличивает продуктивность человека на 30% и за 6 часов работы он будет делать результат как при 9 часах"
+                    ></div>
                       <div class="slider-solution__bullet-modal">
-                        <p class="slider-solution__bullet-modal-description">Столы и стулья с регулируемой высотой позволяют “подстроить” рабочее место под каждого человека индивидуально</p>
-                        <p class="slider-solution__bullet-modal-tip">Это увеличивает продуктивность человека на 30% и за 6 часов работы он будет делать результат как при 9 часах</p>
+                        <p class="slider-solution__bullet-modal-description">
+                          Столы и стулья с регулируемой высотой позволяют
+                          “подстроить” рабочее место под каждого человека
+                          индивидуально
+                        </p>
+                        <p class="slider-solution__bullet-modal-tip">
+                          Это увеличивает продуктивность человека на 30% и за 6
+                          часов работы он будет делать результат как при 9 часах
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="slider-solution__slide">
                   <div class="slider-solution__img-container">
-                    <img src="./images/solution/img-slider.jpg" alt="">
+                    <img src="./images/solution/img-slider.jpg" alt="" />
                   </div>
                   <div class="slider-solution__bullets">
-                    <div style="left: 24%; top: 38%;" class="slider-solution__container-bullet">
-                      <div class="slider-solution__bullet"></div>
+                    <div
+                      style="left: 24%; top: 38%;"
+                      class="slider-solution__container-bullet"
+                    >
+                    <div 
+                      class="slider-solution__bullet"
+                      data-tooltip-text="Столы и стулья с регулируемой высотой позволяют “подстроить” рабочее место под каждого человека индивидуально"
+                      data-tooltip-pretext="Это увеличивает продуктивность человека на 30% и за 6 часов работы он будет делать результат как при 9 часах"
+                    ></div>
                       <div class="slider-solution__bullet-modal">
-                        <p class="slider-solution__bullet-modal-description">Столы и стулья с регулируемой высотой позволяют “подстроить” рабочее место под каждого человека индивидуально</p>
-                        <p class="slider-solution__bullet-modal-tip">Это увеличивает продуктивность человека на 30% и за 6 часов работы он будет делать результат как при 9 часах</p>
+                        <p class="slider-solution__bullet-modal-description">
+                          Столы и стулья с регулируемой высотой позволяют
+                          “подстроить” рабочее место под каждого человека
+                          индивидуально
+                        </p>
+                        <p class="slider-solution__bullet-modal-tip">
+                          Это увеличивает продуктивность человека на 30% и за 6
+                          часов работы он будет делать результат как при 9 часах
+                        </p>
                       </div>
                     </div>
-                    <div style="left: 58%; top: 61%;" class="slider-solution__container-bullet">
-                      <div class="slider-solution__bullet"></div>
+                    <div
+                      style="left: 58%; top: 61%;"
+                      class="slider-solution__container-bullet"
+                    >
+                    <div 
+                      class="slider-solution__bullet"
+                      data-tooltip-text="Столы и стулья с регулируемой высотой позволяют “подстроить” рабочее место под каждого человека индивидуально"
+                      data-tooltip-pretext="Это увеличивает продуктивность человека на 30% и за 6 часов работы он будет делать результат как при 9 часах"
+                    ></div>
                       <div class="slider-solution__bullet-modal">
-                        <p class="slider-solution__bullet-modal-description">Столы и стулья с регулируемой высотой позволяют “подстроить” рабочее место под каждого человека индивидуально</p>
-                        <p class="slider-solution__bullet-modal-tip">Это увеличивает продуктивность человека на 30% и за 6 часов работы он будет делать результат как при 9 часах</p>
+                        <p class="slider-solution__bullet-modal-description">
+                          Столы и стулья с регулируемой высотой позволяют
+                          “подстроить” рабочее место под каждого человека
+                          индивидуально
+                        </p>
+                        <p class="slider-solution__bullet-modal-tip">
+                          Это увеличивает продуктивность человека на 30% и за 6
+                          часов работы он будет делать результат как при 9 часах
+                        </p>
                       </div>
                     </div>
-                    <div style="left: 70%; top: 18%;" class="slider-solution__container-bullet">
-                      <div class="slider-solution__bullet"></div>
+                    <div
+                      style="left: 70%; top: 18%;"
+                      class="slider-solution__container-bullet"
+                    >
+                    <div 
+                      class="slider-solution__bullet"
+                      data-tooltip-text="Столы и стулья с регулируемой высотой позволяют “подстроить” рабочее место под каждого человека индивидуально"
+                      data-tooltip-pretext="Это увеличивает продуктивность человека на 30% и за 6 часов работы он будет делать результат как при 9 часах"
+                    ></div>
                       <div class="slider-solution__bullet-modal">
-                        <p class="slider-solution__bullet-modal-description">Столы и стулья с регулируемой высотой позволяют “подстроить” рабочее место под каждого человека индивидуально</p>
-                        <p class="slider-solution__bullet-modal-tip">Это увеличивает продуктивность человека на 30% и за 6 часов работы он будет делать результат как при 9 часах</p>
+                        <p class="slider-solution__bullet-modal-description">
+                          Столы и стулья с регулируемой высотой позволяют
+                          “подстроить” рабочее место под каждого человека
+                          индивидуально
+                        </p>
+                        <p class="slider-solution__bullet-modal-tip">
+                          Это увеличивает продуктивность человека на 30% и за 6
+                          часов работы он будет делать результат как при 9 часах
+                        </p>
                       </div>
                     </div>
-                    <div style="left: 78%; top: 59%;" class="slider-solution__container-bullet">
-                      <div class="slider-solution__bullet"></div>
+                    <div
+                      style="left: 78%; top: 59%;"
+                      class="slider-solution__container-bullet"
+                    >
+                    <div 
+                      class="slider-solution__bullet"
+                      data-tooltip-text="Столы и стулья с регулируемой высотой позволяют “подстроить” рабочее место под каждого человека индивидуально"
+                      data-tooltip-pretext="Это увеличивает продуктивность человека на 30% и за 6 часов работы он будет делать результат как при 9 часах"
+                    ></div>
                       <div class="slider-solution__bullet-modal">
-                        <p class="slider-solution__bullet-modal-description">Столы и стулья с регулируемой высотой позволяют “подстроить” рабочее место под каждого человека индивидуально</p>
-                        <p class="slider-solution__bullet-modal-tip">Это увеличивает продуктивность человека на 30% и за 6 часов работы он будет делать результат как при 9 часах</p>
+                        <p class="slider-solution__bullet-modal-description">
+                          Столы и стулья с регулируемой высотой позволяют
+                          “подстроить” рабочее место под каждого человека
+                          индивидуально
+                        </p>
+                        <p class="slider-solution__bullet-modal-tip">
+                          Это увеличивает продуктивность человека на 30% и за 6
+                          часов работы он будет делать результат как при 9 часах
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="slider-solution__arrows">
-                <div class="slider-solution__arrow object-slider__arrow arrow-left"></div>
-                <div class="slider-solution__arrow object-slider__arrow arrow-right"></div>
               </div>
             </div>
-            <div class="review-solution">
-              <div class="review-solution__img">
-                <div class="review-solution__img-inner">
-                  <img src="./images/solution/img-reviewer.jpg" alt="" />
-                </div>
-              </div>
-              <p>
-                “Если вы требуете от кого-нибудь, чтобы он отдал свое время и
-                энергию для дела, то позаботьтесь, чтобы он не испытывал финансовых
-                трудностей.“
-              </p>
-              <div class="review-solution__author-quote">
-                —&nbsp;&nbsp;&nbsp;&nbsp; Цитата Генри Форда
-              </div>
+        </div>
+        <div class="review-solution">
+          <div class="review-solution__img">
+            <div class="review-solution__img-inner">
+              <img src="./images/solution/img-reviewer.jpg" alt="" />
             </div>
           </div>
+          <p>
+            “Если вы требуете от кого-нибудь, чтобы он отдал свое время и
+            энергию для дела, то позаботьтесь, чтобы он не испытывал
+            финансовых трудностей.“
+          </p>
+          <div class="review-solution__author-quote">
+            —&nbsp;&nbsp;&nbsp;&nbsp; Цитата Генри Форда
+          </div>
+        </div>
       </div>
     </div>
 
@@ -1138,122 +1656,152 @@
           <div class="feedback-slider__container">
             <div class="feedback-slider__slide">
               <div class="feedback-slider__slide-container">
-                  <div class="feedback-slider__img">
-                    <img src="./images/feedback/img-slider.png" alt="">
-                    <div class="feedback-slider__img-more">
-                      Еще фото
+                <div class="feedback-slider__img">
+                  <img src="./images/feedback/img-slider.png" alt="" />
+                  <div class="feedback-slider__img-more">
+                    Еще фото
+                  </div>
+                </div>
+                <div class="feedback-slider__content">
+                  <h5>Проект для офиса компании “Компания”</h5>
+                  <p class="feedback-slider__content-preheading">
+                    Укомплектовали 3 рабочих кабинета, зону отдыха и кабинет
+                    руководителя.
+                  </p>
+                  <ul class="feedback-slider__list">
+                    <li>
+                      <i class="icons-feedback icon-area"></i>
+                      <p>
+                        <strong>Площадь:</strong>
+                        105 кв. метров
+                      </p>
+                    </li>
+                    <li>
+                      <i class="icons-feedback icon-estimate"></i>
+                      <p>
+                        <strong>Срок реализации:</strong>
+                        14 дней
+                      </p>
+                    </li>
+                  </ul>
+                  <p class="feedback-slider__review">
+                    «Я очень рад, что обратился в эту компанию! Учитывая, что
+                    проект моего офиса требовал детальной проработки, ребята
+                    справились с задачей профессионально и в срок.»
+                  </p>
+                  <span class="feedback-slider__review-author"
+                    >—&nbsp;&nbsp; Евгений, руководитель компании
+                    «Компания»</span
+                  >
+                  <footer class="feedback-slider__footer">
+                    <a href="#!">
+                      Смотреть отзыв
+                    </a>
+                    <div class="feedback-slider__signature">
+                      <img src="images/feedback/signature.png" alt="" />
                     </div>
-                  </div>
-                  <div class="feedback-slider__content">
-                    <h5>Проект для офиса компании “Компания”</h5>
-                    <p class="feedback-slider__content-preheading">Укомплектовали 3 рабочих кабинета, зону отдыха и кабинет руководителя.</p>
-                    <ul class="feedback-slider__list">
-                      <li>
-                        <i class="icons-feedback icon-area"></i>
-                        <p>
-                          <strong>Площадь:</strong>
-                          105 кв. метров
-                        </p>
-                      </li>
-                      <li>
-                        <i class="icons-feedback icon-estimate"></i>
-                        <p>
-                          <strong>Срок реализации:</strong>
-                          14 дней
-                        </p>
-                      </li>
-                    </ul>
-                    <p class="feedback-slider__review">«Я очень рад, что обратился в эту компанию! Учитывая, что проект моего офиса требовал детальной проработки, ребята справились с задачей профессионально и в срок.»</p>
-                    <span class="feedback-slider__review-author">—&nbsp;&nbsp; Евгений, руководитель компании «Компания»</span>
-                    <footer class="feedback-slider__footer">
-                      <a href="#!">
-                        Смотреть отзыв
-                      </a>
-                      <div class="feedback-slider__signature">
-                        <img src="images/feedback/signature.png" alt="">
-                      </div>
-                    </footer>
-                  </div>
+                  </footer>
+                </div>
               </div>
             </div>
             <div class="feedback-slider__slide">
               <div class="feedback-slider__slide-container">
-                  <div class="feedback-slider__img">
-                    <img src="./images/feedback/img-slider.png" alt="">
-                    <div class="feedback-slider__img-more">
-                      Еще фото
+                <div class="feedback-slider__img">
+                  <img src="./images/feedback/img-slider.png" alt="" />
+                  <div class="feedback-slider__img-more">
+                    Еще фото
+                  </div>
+                </div>
+                <div class="feedback-slider__content">
+                  <h5>Проект для офиса компании “Компания”</h5>
+                  <p class="feedback-slider__content-preheading">
+                    Укомплектовали 3 рабочих кабинета, зону отдыха и кабинет
+                    руководителя.
+                  </p>
+                  <ul class="feedback-slider__list">
+                    <li>
+                      <i class="icons-feedback icon-area"></i>
+                      <p>
+                        <strong>Площадь:</strong>
+                        105 кв. метров
+                      </p>
+                    </li>
+                    <li>
+                      <i class="icons-feedback icon-estimate"></i>
+                      <p>
+                        <strong>Срок реализации:</strong>
+                        14 дней
+                      </p>
+                    </li>
+                  </ul>
+                  <p class="feedback-slider__review">
+                    «Я очень рад, что обратился в эту компанию! Учитывая, что
+                    проект моего офиса требовал детальной проработки, ребята
+                    справились с задачей профессионально и в срок.»
+                  </p>
+                  <span class="feedback-slider__review-author"
+                    >—&nbsp;&nbsp; Евгений, руководитель компании
+                    «Компания»</span
+                  >
+                  <footer class="feedback-slider__footer">
+                    <a href="#!">
+                      Смотреть отзыв
+                    </a>
+                    <div class="feedback-slider__signature">
+                      <img src="images/feedback/signature.png" alt="" />
                     </div>
-                  </div>
-                  <div class="feedback-slider__content">
-                    <h5>Проект для офиса компании “Компания”</h5>
-                    <p class="feedback-slider__content-preheading">Укомплектовали 3 рабочих кабинета, зону отдыха и кабинет руководителя.</p>
-                    <ul class="feedback-slider__list">
-                      <li>
-                        <i class="icons-feedback icon-area"></i>
-                        <p>
-                          <strong>Площадь:</strong>
-                          105 кв. метров
-                        </p>
-                      </li>
-                      <li>
-                        <i class="icons-feedback icon-estimate"></i>
-                        <p>
-                          <strong>Срок реализации:</strong>
-                          14 дней
-                        </p>
-                      </li>
-                    </ul>
-                    <p class="feedback-slider__review">«Я очень рад, что обратился в эту компанию! Учитывая, что проект моего офиса требовал детальной проработки, ребята справились с задачей профессионально и в срок.»</p>
-                    <span class="feedback-slider__review-author">—&nbsp;&nbsp; Евгений, руководитель компании «Компания»</span>
-                    <footer class="feedback-slider__footer">
-                      <a href="#!">
-                        Смотреть отзыв
-                      </a>
-                      <div class="feedback-slider__signature">
-                        <img src="images/feedback/signature.png" alt="">
-                      </div>
-                    </footer>
-                  </div>
+                  </footer>
+                </div>
               </div>
             </div>
             <div class="feedback-slider__slide">
               <div class="feedback-slider__slide-container">
-                  <div class="feedback-slider__img">
-                    <img src="./images/feedback/img-slider.png" alt="">
-                    <div class="feedback-slider__img-more">
-                      Еще фото
+                <div class="feedback-slider__img">
+                  <img src="./images/feedback/img-slider.png" alt="" />
+                  <div class="feedback-slider__img-more">
+                    Еще фото
+                  </div>
+                </div>
+                <div class="feedback-slider__content">
+                  <h5>Проект для офиса компании “Компания”</h5>
+                  <p class="feedback-slider__content-preheading">
+                    Укомплектовали 3 рабочих кабинета, зону отдыха и кабинет
+                    руководителя.
+                  </p>
+                  <ul class="feedback-slider__list">
+                    <li>
+                      <i class="icons-feedback icon-area"></i>
+                      <p>
+                        <strong>Площадь:</strong>
+                        105 кв. метров
+                      </p>
+                    </li>
+                    <li>
+                      <i class="icons-feedback icon-estimate"></i>
+                      <p>
+                        <strong>Срок реализации:</strong>
+                        14 дней
+                      </p>
+                    </li>
+                  </ul>
+                  <p class="feedback-slider__review">
+                    «Я очень рад, что обратился в эту компанию! Учитывая, что
+                    проект моего офиса требовал детальной проработки, ребята
+                    справились с задачей профессионально и в срок.»
+                  </p>
+                  <span class="feedback-slider__review-author"
+                    >—&nbsp;&nbsp; Евгений, руководитель компании
+                    «Компания»</span
+                  >
+                  <footer class="feedback-slider__footer">
+                    <a href="#!">
+                      Смотреть отзыв
+                    </a>
+                    <div class="feedback-slider__signature">
+                      <img src="images/feedback/signature.png" alt="" />
                     </div>
-                  </div>
-                  <div class="feedback-slider__content">
-                    <h5>Проект для офиса компании “Компания”</h5>
-                    <p class="feedback-slider__content-preheading">Укомплектовали 3 рабочих кабинета, зону отдыха и кабинет руководителя.</p>
-                    <ul class="feedback-slider__list">
-                      <li>
-                        <i class="icons-feedback icon-area"></i>
-                        <p>
-                          <strong>Площадь:</strong>
-                          105 кв. метров
-                        </p>
-                      </li>
-                      <li>
-                        <i class="icons-feedback icon-estimate"></i>
-                        <p>
-                          <strong>Срок реализации:</strong>
-                          14 дней
-                        </p>
-                      </li>
-                    </ul>
-                    <p class="feedback-slider__review">«Я очень рад, что обратился в эту компанию! Учитывая, что проект моего офиса требовал детальной проработки, ребята справились с задачей профессионально и в срок.»</p>
-                    <span class="feedback-slider__review-author">—&nbsp;&nbsp; Евгений, руководитель компании «Компания»</span>
-                    <footer class="feedback-slider__footer">
-                      <a href="#!">
-                        Смотреть отзыв
-                      </a>
-                      <div class="feedback-slider__signature">
-                        <img src="images/feedback/signature.png" alt="">
-                      </div>
-                    </footer>
-                  </div>
+                  </footer>
+                </div>
               </div>
             </div>
             <ul class="slick-dots"></ul>
@@ -1277,7 +1825,7 @@
           стоимости в 3-х ценовых вариантах.
         </p>
         <div class="equipment-quiz">
-          <div class="equipment-quiz__count">
+          <div id="equipment-quiz__count" class="equipment-quiz__count">
             Осталось <i>7</i> вопросов из 7
           </div>
           <div class="equipment-quiz__steps">
@@ -1289,38 +1837,407 @@
             <div class="equipment-quiz__step"></div>
             <div class="equipment-quiz__step"></div>
           </div>
-          <div class="equipment-quiz__content">
-            <p class="equipment-quiz__content-heading">
-              Сколько сотрудников работает в офисе?
-            </p>
-            <div class="equipment-quiz__content-options">
-              <label class="equipment-quiz__content-option checked">
-                до 5 человек
-              </label>
-              <label class="equipment-quiz__content-option">
-                10 - 20 человек
-              </label>
-              <label class="equipment-quiz__content-option">
-                30 - 50 человек
-              </label>
-              <label class="equipment-quiz__content-option">
-                5 - 10 человек
-              </label>
-              <label class="equipment-quiz__content-option">
-                20 - 30 человек
-              </label>
-              <label class="equipment-quiz__content-option">
-                от 50 человек
-              </label>
+          <div id="equipment-quiz" class="equipment-quiz__container step-1 active-slide">
+            <div class="equipment-quiz__content">
+              <div class="equipment-quiz__content-inner active-slide">
+                <p class="equipment-quiz__content-heading">
+                  Сколько сотрудников работает в офисе?
+                </p>
+                <div class="equipment-quiz__content-options">
+                  <label class="equipment-quiz__content-option checked">
+                    <input type="radio" name="step1">
+                    <div class="checkbox__checkmark"></div>
+                    <span>до 5 человек</span>
+                  </label>
+                  <label class="equipment-quiz__content-option">
+                      <input type="radio" name="step1">
+                      <div class="checkbox__checkmark"></div>
+                      <span>10 - 20 человек</span>
+                    
+                  </label>
+                  <label class="equipment-quiz__content-option">
+                    <input type="radio" name="step1">
+                    <div class="checkbox__checkmark"></div>
+                    <span>30 - 50 человек</span>
+                    
+                  </label>
+                  <label class="equipment-quiz__content-option">
+                      <input type="radio" name="step1">
+                      <div class="checkbox__checkmark"></div>
+                      <span>5 - 10 человек</span>
+                    
+                  </label>
+                  <label class="equipment-quiz__content-option">
+                      <input type="radio" name="step1">
+                      <div class="checkbox__checkmark"></div>
+                      <span>20 - 30 человек</span>
+                    
+                  </label>
+                  <label class="equipment-quiz__content-option">
+                      <input type="radio" name="step1">
+                      <div class="checkbox__checkmark"></div>
+                      <span>от 50 человек</span>
+                    
+                  </label>
+                </div>
+              </div>
             </div>
             <div class="equipment__btn">
-              <button class="btn-general btn-yellow btn-disabled">
+              <button
+                data-to="2"
+                id="equipment__btn"
+                class="btn-general btn-yellow"
+              >
                 <div class="btn-content">
                   Следующий вопрос <i class="icon-next"></i>
                 </div>
               </button>
             </div>
           </div>
+          <div id="equipment-quiz" class="equipment-quiz__container step-2">
+            <div class="equipment-quiz__content">
+              <div class="equipment-quiz__content-inner">
+                <p class="equipment-quiz__content-heading">
+                  В каком пространстве ваши сотрудники будут работать?
+                </p>
+                <div class="equipment-quiz__content-options">
+                  <label class="equipment-quiz__content-option checked">
+                    <input type="radio" name="step1">
+                    <img src="images/quiz/img1-step2.jpg" alt="">
+                    <div class="checkbox__checkmark"></div>
+                    <span>Отдельные кабинеты</span>
+                  </label>
+                  <label class="equipment-quiz__content-option">
+                      <input type="radio" name="step1">
+                      <img src="images/quiz/img2-step2.jpg" alt="">
+                      <div class="checkbox__checkmark"></div>
+                      <span>Open Space</span>
+                    
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="equipment__btn">
+              <button
+                data-to="3"
+                id="equipment__btn"
+                class="btn-general btn-yellow"
+              >
+                <div class="btn-content">
+                  Следующий вопрос <i class="icon-next"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+          <div id="equipment-quiz" class="equipment-quiz__container step-3">
+              <div class="equipment-quiz__content">
+                <div class="equipment-quiz__content-inner">
+                    <p class="equipment-quiz__content-heading">
+                        Укажите количество рабочих кабинетов <i id="amount2"></i>
+                    </p>
+                    <div class="quiz-range">
+                        
+                        <div class="slider-range" id="slider-range"></div>
+                    </div>
+                  <p class="equipment-quiz__content-heading">
+                      Укажите общую площадь кабинетов в кв. метрах
+                  </p>
+                  <div class="equipment-quiz__content-options">
+                    <label class="equipment-quiz__content-option checked">
+                      <input type="radio" name="step1">
+                      <div class="checkbox__checkmark"></div>
+                      <span>до 100 м<sup>2</sup></span>
+                    </label>
+                    <label class="equipment-quiz__content-option">
+                        <input type="radio" name="step1">
+                        <div class="checkbox__checkmark"></div>
+                        <span>100 - 300 м<sup>2</sup></span>
+                    </label>
+                    <label class="equipment-quiz__content-option">
+                        <input type="radio" name="step1">
+                        <div class="checkbox__checkmark"></div>
+                        <span>300 - 500 м<sup>2</sup></span>
+                    </label>
+                    <label class="equipment-quiz__content-option">
+                        <input type="radio" name="step1">
+                        <div class="checkbox__checkmark"></div>
+                        <span>не знаю, нужен замер</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="equipment__btn">
+                <button
+                  data-to="4"
+                  id="equipment__btn"
+                  class="btn-general btn-yellow"
+                >
+                  <div class="btn-content">
+                    Следующий вопрос <i class="icon-next"></i>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div id="equipment-quiz" class="equipment-quiz__container step-4">
+                <div class="equipment-quiz__content">
+                  <div class="equipment-quiz__content-inner">
+                      <p class="equipment-quiz__content-heading">
+                          Укажите площадь Open Space <i id="amount3"></i>
+                      </p>
+                      <div class="quiz-range">
+                          
+                          <div class="slider-range" id="slider-range2"></div>
+                      </div>
+                  </div>
+                </div>
+                <div class="equipment__btn">
+                  <button
+                    data-to="5"
+                    id="equipment__btn"
+                    class="btn-general btn-yellow"
+                  >
+                    <div class="btn-content">
+                      Следующий вопрос <i class="icon-next"></i>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div id="equipment-quiz" class="equipment-quiz__container step-5">
+                  <div class="equipment-quiz__content">
+                    <div class="equipment-quiz__content-inner">
+                      <p class="equipment-quiz__content-heading">
+                        Ваши сотрудники принимают клиентов в офисе?
+                      </p>
+                      <div class="equipment-quiz__content-options">
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="radio" name="step5">
+                          <img src="images/quiz/img1-step5.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Да, интерьер в офисе должен помогать в продажах</span>
+                        </label>
+                        <label class="equipment-quiz__content-option">
+                            <input type="radio" name="step5">
+                            <img src="images/quiz/img2-step5.jpg" alt="">
+                            <div class="checkbox__checkmark"></div>
+                            <span>Нет, самое важное — чтобы сотрудникам было комфортно работать</span>
+                          
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="equipment__btn">
+                    <button
+                      data-to="6"
+                      id="equipment__btn"
+                      class="btn-general btn-yellow"
+                    >
+                      <div class="btn-content">
+                        Следующий вопрос <i class="icon-next"></i>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              <div id="equipment-quiz" class="equipment-quiz__container step-6">
+                  <div class="equipment-quiz__content">
+                    <div class="equipment-quiz__content-inner">
+                      <p class="equipment-quiz__content-heading">
+                        Какие еще помещеения нужно укомплектовать?
+                        <span>Выберите один или несколько вариантов</span>
+                      </p>
+                      <div class="equipment-quiz__content-options">
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="checkbox" name="step6">
+                          <img src="images/quiz/img1-step6.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Кабинет руководителя</span>
+                        </label>
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="checkbox" name="step6">
+                          <img src="images/quiz/img2-step6.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Кухня</span>
+                        </label>
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="checkbox" name="step6">
+                          <img src="images/quiz/img3-step6.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Зона отдыха</span>
+                        </label>
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="checkbox" name="step6">
+                          <img src="images/quiz/img4-step6.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Ресепшн</span>
+                        </label>
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="checkbox" name="step6">
+                          <img src="images/quiz/img5-step6.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Зал для переговоров</span>
+                        </label>
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="checkbox" name="step6">
+                          <img src="images/quiz/img6-step6.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Комната для обучения и тренингов</span>
+                        </label>
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="checkbox" name="step6">
+                          <img src="images/quiz/img7-step6.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Гардеробная комната</span>
+                        </label>
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="checkbox" name="step6">
+                          <img src="images/quiz/img8-step6.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Санузлы</span>
+                        </label>
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="checkbox" name="step6">
+                          <img src="images/quiz/img9-step6.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Подсобные помещения</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="equipment__btn">
+                    <button
+                      data-to="7"
+                      id="equipment__btn"
+                      class="btn-general btn-yellow"
+                    >
+                      <div class="btn-content">
+                        Следующий вопрос <i class="icon-next"></i>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              <div id="equipment-quiz" class="equipment-quiz__container step-7">
+                  <div class="equipment-quiz__content">
+                    <div class="equipment-quiz__content-inner">
+                      <p class="equipment-quiz__content-heading">
+                        Какие еще помещеения нужно укомплектовать?
+                        <span>Выберите один или несколько вариантов</span>
+                      </p>
+                      <div class="equipment-quiz__content-options">
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="checkbox" name="step7">
+                          <img src="images/quiz/img1-step7.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Только мебель</span>
+                        </label>
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="checkbox" name="step7">
+                          <img src="images/quiz/img2-step7.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Продумать зонирование</span>
+                        </label>
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="checkbox" name="step7">
+                          <img src="images/quiz/img3-step7.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Подобрать и установить освещение</span>
+                        </label>
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="checkbox" name="step7">
+                          <img src="images/quiz/img4-step7.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Проектирование и производство стеклянных перегородок</span>
+                        </label>
+                        <label class="equipment-quiz__content-option checked">
+                          <input type="checkbox" name="step7">
+                          <img src="images/quiz/img5-step7.jpg" alt="">
+                          <div class="checkbox__checkmark"></div>
+                          <span>Проектирование и производство сантехнических перегородок</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="equipment__btn">
+                    <button
+                      data-to="8"
+                      id="equipment__btn"
+                      class="btn-general btn-yellow"
+                    >
+                      <div class="btn-content">
+                        Следующий вопрос <i class="icon-next"></i>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+                <div id="equipment-quiz" class="equipment-quiz__container step-8">
+                    <div class="equipment-quiz__content">
+                      <div class="equipment-quiz__content-inner">
+                        <p class="equipment-quiz__content-heading">
+                            <span>Все готово. Остался последний шаг</span>
+                            Получите индивидуальный расчет стоимости в трех ценовых вариантах*
+                        </p>
+                        <p class="equipment-quiz__content-preheading">Мы обработаем данные вашей анкеты, зададим несколько уточняющих вопросов и вышлем индивидуальный расчет стоимости</p>
+                        <form action="#" class="catalog__form">
+                            <div class="catalog__form_group-container">
+                                <label for="" class="catalog__form_group">
+                                  <input class="input-general" type="text" placeholder="Введите номер телефона">
+                                </label>
+                                <label for="" class="catalog__form_group">
+                                  <button class="btn-general btn-yellow">
+                                    <div class="btn-content">
+                                      Получить каталог
+                                    </div>
+                                  </button>
+                                </label>
+                            </div>
+                            <label class="catalog__form_group">
+                              <label class="checkbox__container">
+                                  <input type="checkbox" checked>
+                                  <div class="checkbox__checkmark"></div>
+                              </label>
+                              <p>
+                                <span>Вы соглашаетесь с условиями</span>
+                                <a href="#!">обработки персональных данных</a>
+                              </p>
+                            </label>
+                            <h5>Как Вам удобно получить индивидуальный расчет стоимости?</h5>
+                            <ul class="catalog__form-socials">
+                              <li class="icon-viber">
+                                <a href="#!">
+                                  <span class="catalog__form-socials_icon-container">
+                                    <i class="icons-social"></i>
+                                  </span>
+                                  Viber
+                                </a>
+                              </li>
+                              <li class="icon-telegram">
+                                <a href="#!">
+                                  <span class="catalog__form-socials_icon-container">
+                                    <i class="icons-social"></i>
+                                  </span>
+                                  Telegram
+                                </a>
+                              </li>
+                              <li class="icon-whatsapp">
+                                <a href="#!">
+                                  <span class="catalog__form-socials_icon-container">
+                                    <i class="icons-social"></i>
+                                  </span>
+                                  WhatsApp
+                                </a>
+                              </li>
+                              <li class="icon-email">
+                                <a href="#!">
+                                  <span class="catalog__form-socials_icon-container">
+                                    <i class="icons-social"></i>
+                                  </span>
+                                  E-mail
+                                </a>
+                              </li>
+                            </ul>
+                            <div class="quiz-last-step-review">**Вы получите расчет с точностью до 80%. Точную стоимость вы сможете узнать после того, как мы сделаем замеры, подробно обсудим ваши задачи и подготовим проект.</div>
+                          </form>
+                      </div>
+                    </div>
+                  </div>
         </div>
       </div>
       <div class="equipment-scroll-text"></div>
@@ -1348,7 +2265,7 @@
               <li class="icon-viber">
                 <a href="#!">
                   <span class="catalog__form-socials_icon-container">
-                      <i class="icons-social"></i>
+                    <i class="icons-social"></i>
                   </span>
                   Viber
                 </a>
@@ -1356,7 +2273,7 @@
               <li class="icon-telegram">
                 <a href="#!">
                   <span class="catalog__form-socials_icon-container">
-                      <i class="icons-social"></i>
+                    <i class="icons-social"></i>
                   </span>
                   Telegram
                 </a>
@@ -1364,7 +2281,7 @@
               <li class="icon-whatsapp">
                 <a href="#!">
                   <span class="catalog__form-socials_icon-container">
-                      <i class="icons-social"></i>
+                    <i class="icons-social"></i>
                   </span>
                   WhatsApp
                 </a>
@@ -1372,28 +2289,35 @@
               <li class="icon-email">
                 <a href="#!">
                   <span class="catalog__form-socials_icon-container">
-                      <i class="icons-social"></i>
+                    <i class="icons-social"></i>
                   </span>
                   E-mail
                 </a>
               </li>
             </ul>
             <label for="" class="catalog__form_group">
-              <input class="input-general" type="text" placeholder="Введите номер телефона">
+              <input
+                class="input-general"
+                type="text"
+                placeholder="Введите номер телефона"
+              />
             </label>
             <label for="" class="catalog__form_group">
-                <button class="btn-general btn-yellow">
-                  <div class="btn-content">
-                    Получить каталог
-                  </div>
-                </button>
+              <button class="btn-general btn-yellow">
+                <div class="btn-content">
+                  Получить каталог
+                </div>
+              </button>
             </label>
             <label class="catalog__form_group">
-                <input type="checkbox">
-                <p>
-                  <span>Вы соглашаетесь с условиями</span>
-                  <a href="#!">обработки персональных данных</a>
-                </p>
+              <label class="checkbox__container">
+                  <input type="checkbox" />
+                  <div class="checkbox__checkmark"></div>
+              </label>
+              <p>
+                <span>Вы соглашаетесь с условиями</span>
+                <a href="#!">обработки персональных данных</a>
+              </p>
             </label>
           </form>
         </div>
@@ -1404,12 +2328,14 @@
     <div id="contacts">
       <div class="wrapper">
         <div class="contacts-head">
-            <h4 class="contacts-heading">
-              <strong>Приезжайте к нам в офис или на производство,</strong>
-              чтобы вживую увидеть наши выполненные работы
-              <span>и обсудить Ваш проект <i>или</i></span>
-            </h4>
-            <a class="contacts-preheading" href="#!">закажите бесплатный дизайн-проект</a>
+          <h4 class="contacts-heading">
+            <strong>Приезжайте к нам в офис или на производство,</strong>
+            чтобы вживую увидеть наши выполненные работы
+            <span>и обсудить Ваш проект <i>или</i></span>
+          </h4>
+          <a class="contacts-preheading" href="#!"
+            >закажите бесплатный дизайн-проект</a
+          >
         </div>
         <ul class="contacts-tabs">
           <li class="ui-tabs-active"><a href="#office">Офис</a></li>
@@ -1421,8 +2347,8 @@
               <li>
                 <i class="icons-contacts icon-location"></i>
                 <p>
-                    Минск, пр-т Газеты<br />
-                    Звезда 47, офис 620
+                  Минск, пр-т Газеты<br />
+                  Звезда 47, офис 620
                 </p>
               </li>
               <li>
@@ -1439,14 +2365,25 @@
             </ul>
             <div class="contacts-inner__questions">
               <ul class="contacts-inner__questions-social">
-                <li><a href="#!"><i class="icon-contacts icon-whatsapp"></i></a></li>
-                  <li><a href="#!"><i class="icon-contacts icon-telegram"></i></a></li>
-                <li><a href="#!"><i class="icon-contacts icon-viber"></i></a></li>
+                <li>
+                  <a href="#!"><i class="icon-contacts icon-whatsapp"></i></a>
+                </li>
+                <li>
+                  <a href="#!"><i class="icon-contacts icon-telegram"></i></a>
+                </li>
+                <li>
+                  <a href="#!"><i class="icon-contacts icon-viber"></i></a>
+                </li>
               </ul>
               <span>Задавайте вопросы в любое время</span>
             </div>
           </div>
-          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6c335d0eb0f679d0d84f02dba59352c72f701760cc4963e1d4bb4726a0cdd146&amp;height=649&amp;lang=ru_RU&amp;scroll=true"></script>
+          <script
+            type="text/javascript"
+            charset="utf-8"
+            async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6c335d0eb0f679d0d84f02dba59352c72f701760cc4963e1d4bb4726a0cdd146&amp;height=649&amp;lang=ru_RU&amp;scroll=true"
+          ></script>
         </div>
         <div id="production" class="contacts-container">
           <div class="contacts-inner">
@@ -1454,8 +2391,8 @@
               <li>
                 <i class="icons-contacts icon-location"></i>
                 <p>
-                    2.Минск, пр-т Газеты<br />
-                    Звезда 47, офис 620
+                  2.Минск, пр-т Газеты<br />
+                  Звезда 47, офис 620
                 </p>
               </li>
               <li>
@@ -1472,39 +2409,71 @@
             </ul>
             <div class="contacts-inner__questions">
               <ul class="contacts-inner__questions-social">
-                <li><a href="#!"><i class="icon-contacts icon-whatsapp"></i></a></li>
-                  <li><a href="#!"><i class="icon-contacts icon-telegram"></i></a></li>
-                <li><a href="#!"><i class="icon-contacts icon-viber"></i></a></li>
+                <li>
+                  <a href="#!"><i class="icon-contacts icon-whatsapp"></i></a>
+                </li>
+                <li>
+                  <a href="#!"><i class="icon-contacts icon-telegram"></i></a>
+                </li>
+                <li>
+                  <a href="#!"><i class="icon-contacts icon-viber"></i></a>
+                </li>
               </ul>
               <span>Задавайте вопросы в любое время</span>
             </div>
           </div>
-          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6c335d0eb0f679d0d84f02dba59352c72f701760cc4963e1d4bb4726a0cdd146&amp;height=649&amp;lang=ru_RU&amp;scroll=true"></script>
+          <script
+            type="text/javascript"
+            charset="utf-8"
+            async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6c335d0eb0f679d0d84f02dba59352c72f701760cc4963e1d4bb4726a0cdd146&amp;height=649&amp;lang=ru_RU&amp;scroll=true"
+          ></script>
         </div>
       </div>
       <div class="contacts-scroll-text"></div>
     </div>
 
     <div class="contacts-wrapper wrapper">
-        <div class="header-top">
-          <a href="#!" id="logo">Davs</a>
-          <p class="header-description">
-            Изготовление мебели по индивидуальному заказу для торговых помещений
-            и офисов в г. Минске
-          </p>
-          <a href="tel:+375291800092" class="number-header"
-            >+375 29 180 00 92</a
-          >
-          <div class="btn-general btn-transparent btn-blue">
-            <div class="btn-content">Заказать звонок</div>
-            <div class="btn-side">
-              <i class="icons icon-call"></i>
-            </div>
+      <div class="header-top">
+        <a href="#!" id="logo">Davs</a>
+        <p class="header-description">
+          Изготовление мебели по индивидуальному заказу для торговых помещений и
+          офисов в г. Минске
+        </p>
+        <a href="tel:+375291800092" class="number-header">+375 29 180 00 92</a>
+        <div class="btn-general btn-transparent btn-blue">
+          <div class="btn-content">Заказать звонок</div>
+          <div class="btn-side">
+            <i class="icons icon-call"></i>
           </div>
         </div>
+      </div>
     </div>
 
     <div id="copyrights">
+      <div id="copyright-modal" class="copyright-modal modal hidden">
+        <div class="copyright-modal__container">
+          <div class="icon-close"></div>
+            <div class="copyright-block">
+                <h6>Обязательства сторон</h6>
+                <p>3.7. Администрация Сайта совместно с Пользователем принимает все необходимые меры по предотвращению убытков или иных отрицательных последствий, вызванных утратой или разглашением персональных данных Пользователя.</p>
+                <p>3.7. Администрация Сайта совместно с Пользователем принимает все необходимые меры по предотвращению убытков или иных отрицательных последствий, вызванных утратой или разглашением персональных данных Пользователя.</p>
+                <p>3.7. Администрация Сайта совместно с Пользователем принимает все необходимые меры по предотвращению убытков или иных отрицательных последствий, вызванных утратой или разглашением персональных данных Пользователя.</p>
+            </div>
+            <div class="copyright-block">
+                <h6>Обязательства сторон</h6>
+                <p>3.7. Администрация Сайта совместно с Пользователем принимает все необходимые меры по предотвращению убытков или иных отрицательных последствий, вызванных утратой или разглашением персональных данных Пользователя.</p>
+                <p>3.7. Администрация Сайта совместно с Пользователем принимает все необходимые меры по предотвращению убытков или иных отрицательных последствий, вызванных утратой или разглашением персональных данных Пользователя.</p>
+                <p>3.7. Администрация Сайта совместно с Пользователем принимает все необходимые меры по предотвращению убытков или иных отрицательных последствий, вызванных утратой или разглашением персональных данных Пользователя.</p>
+            </div>
+            <div class="copyright-block">
+                <h6>Обязательства сторон</h6>
+                <p>3.7. Администрация Сайта совместно с Пользователем принимает все необходимые меры по предотвращению убытков или иных отрицательных последствий, вызванных утратой или разглашением персональных данных Пользователя.</p>
+                <p>3.7. Администрация Сайта совместно с Пользователем принимает все необходимые меры по предотвращению убытков или иных отрицательных последствий, вызванных утратой или разглашением персональных данных Пользователя.</p>
+                <p>3.7. Администрация Сайта совместно с Пользователем принимает все необходимые меры по предотвращению убытков или иных отрицательных последствий, вызванных утратой или разглашением персональных данных Пользователя.</p>
+            </div>
+        </div>
+      </div>
       <div class="wrapper">
         <div class="copyright">
           <span>© 2019. Все права защищены</span>
@@ -1513,7 +2482,7 @@
         <div id="author">
           <span>Разработка &nbsp;&nbsp;—</span>
           <a href="http://leadme.agency/" target="_blank">
-            <img src="images/logo-author.png" alt="">
+            <img src="images/logo-author.png" alt="" />
           </a>
         </div>
       </div>
@@ -1524,8 +2493,11 @@
     <script src="js/jquery-2.2.0.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/EZView.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/jquery.paroller.min.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/popup.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

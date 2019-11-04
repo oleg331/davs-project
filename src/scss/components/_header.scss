@@ -227,6 +227,19 @@
   .header-content-btn {
     width: 452px;
     margin: 0 auto;
+    position: relative;
+    overflow: inherit;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 47px;
+      height: 153px;
+      background: url(../images/header/line-header.png) 0 0 no-repeat;
+      position: absolute;
+      right: -6px;
+      top: -58px;
+    }
 
     .icon-calculator {
       display: inline-block;
@@ -237,9 +250,16 @@
       margin-left: -10px;
     }
 
+    .btn-content {
+      padding-right: 0;
+      text-align: center;
+    }
+
     @include medium {
       line-height: 51px;
       max-width: 100%;
     }
   }
+
+
 }
