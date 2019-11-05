@@ -1,6 +1,9 @@
 $(document).ready(function() {
   AOS.init();
   $('.stapler').paroller();
+  $('#contacts .clip').paroller();
+
+  localStorage.removeItem('quiz');
 
   // slider
 
@@ -104,14 +107,21 @@ $(document).ready(function() {
       .hide();
   });
 
+  $('.equipment-quiz .icon-close').click(function() {
+    $('body').removeClass('hidden');
+    $(this)
+      .closest('.wrapper')
+      .removeClass('quiz-modal-block modal');
+  });
+
   $('.header-top .btn-general').click(function() {
     $('body').addClass('hidden');
     $('#modal-header-discount').css('display', 'flex');
   });
 
-  $('.header-info .btn-general').click(function() {
+  $('.header-content .header-content-btn').click(function() {
     $('body').addClass('hidden');
-    $('#modal-header-calculate').css('display', 'flex');
+    $('#equipment .wrapper').addClass('quiz-modal-block modal');
   });
 
   $('.furniture-types__calculate').click(function() {
@@ -139,16 +149,36 @@ $(document).ready(function() {
     $('#copyright-modal').css('display', 'flex');
   });
 
+  $('.contacts-preheading').click(function() {
+    $('body').addClass('hidden');
+    $('#modal-contacts-calculate').css('display', 'flex');
+  });
+
   $('#slider-range').slider({
     max: 6,
     orientation: 'horizontal',
     range: 'min',
     slide: function(event, ui) {
       $('#amount2').html('(' + ui.value + ')');
+    },
+    change: function(event, ui) {
+      let oldState = JSON.parse(localStorage.getItem('quiz')) || {};
+
+      const question = $('.step-3 .equipment-quiz__content-heading')
+        .first()
+        .text()
+        .replace(/\s+/g, ' ')
+        .trim();
+
+      if (oldState['step-3']) oldState['step-3'].question = question;
+      else oldState['step-3'] = { question };
+
+      localStorage.setItem('quiz', JSON.stringify(oldState));
     }
   });
   $('#amount2').html('(' + $('#slider-range').slider('value') + ')');
 
+  let toggled = false;
   $('#slider-range2').slider({
     min: 10,
     step: 10,
@@ -157,6 +187,28 @@ $(document).ready(function() {
     range: 'min',
     slide: function(event, ui) {
       $('#amount3').html('(' + ui.value + ' м<sup>2</sup>)');
+    },
+    change: function(event, ui) {
+      let oldState = JSON.parse(localStorage.getItem('quiz')) || {};
+
+      const question = $('.step-4 .equipment-quiz__content-heading')
+        .first()
+        .text()
+        .replace(/\s+/g, ' ')
+        .trim();
+
+      if (oldState['step-4']) oldState['step-4'].question = question;
+      else oldState['step-4'] = { question };
+
+      localStorage.setItem('quiz', JSON.stringify(oldState));
+
+      if (toggled) return;
+      const stepContainer = $('.step-4');
+      const button = stepContainer.find('.equipment__btn button');
+
+      button.removeClass('btn-disabled');
+      addEventListenerForButton(button);
+      toggled = true;
     }
   });
   $('#amount3').html(
@@ -185,3 +237,26 @@ $(`.object-gallery1`).EZView();
 $(`.object-gallery2`).EZView();
 $(`.object-gallery3`).EZView();
 $(`.object-gallery4`).EZView();
+
+// feedback sliders
+
+function slidersMoreInit(name, count) {
+  for (let i = 1; i <= count; i++) {
+    $(`${name}-${i}`).slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      prevArrow: null,
+      fade: true,
+      nextArrow: $(`${name}-${i} + .feedback-slider__img-more`)
+    });
+
+    $(`${name}-${i} img`).EZView();
+    $(`${name}-${i}`)
+      .closest('.feedback-slider__slide-container')
+      .find('.feedback-slider__footer img')
+      .EZView();
+  }
+}
+
+slidersMoreInit('.slider-more', 3);

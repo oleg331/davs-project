@@ -31,6 +31,46 @@
     @include small {
         padding: 10px 0;
     }
+
+    .icon-close {
+        display: none;
+        width: 19px;
+        height: 19px;
+        position: absolute;
+        right: 32px;
+        top: 32px;
+        background: url(../images/modals/icon-close.png) 0 0 no-repeat;
+        cursor: pointer;
+    }
+
+    .quiz-modal-block {
+        position: fixed;
+        background: rgba(0, 0, 0, .8);
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-flow: column;
+        padding: 10vh 10px;
+        max-width: inherit;
+        overflow-x: hidden;
+        overflow-y: scroll;
+
+        .icon-close {
+            display: inline-block;
+        }
+
+        .equipment-quiz {
+            position: relative;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
 }
 
 .equipment-heading {
@@ -635,6 +675,10 @@
 
 .equipment__btn {
     text-align: center;
+
+    button:not(:last-child) {
+        margin-bottom: 10px;
+    }
 
     .btn-general {
         min-width: 354px;
